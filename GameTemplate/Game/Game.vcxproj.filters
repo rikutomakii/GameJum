@@ -38,7 +38,7 @@
     <MeshContentTask Include="Assets\modelData\unityChan.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
-    <MeshContentTask Include="..\..\..\game1tsume\Game\Assets\modelData\suisei.fbx">
+    <MeshContentTask Include="Assets\modelData\Enemy.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>

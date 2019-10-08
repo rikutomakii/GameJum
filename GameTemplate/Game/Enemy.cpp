@@ -13,15 +13,15 @@ Enemy::~Enemy()
 bool Enemy::Start()
 {
 	m_SkinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_SkinModelRender->Init(L"modelData/suisei/suisei.cmo");
+	m_SkinModelRender->Init(L"modelData/Enemy.cmo");
 	font = NewGO<prefab::CFontRender>(0);
+
 	return true;
 }
 
 void Enemy::Update()
 {
 	
-	enemyMove();
 
 
 }
@@ -31,7 +31,7 @@ void Enemy::enemyMove()
 	enemyPos.z -= 1;
 	m_SkinModelRender->SetPosition(enemyPos);
 
-	font->SetText(L"Great");
+	
 
 }
 
@@ -39,8 +39,7 @@ void Enemy::Shoumetsu()
 {
 	if (Pad(0).IsTrigger(enButtonA)){//ドアで挟まれたときってやつに変える
 		DeleteGO(this);
-
-		prefab::CEffect* effect = NewGO<prefab::CEffect>(0);
+		prefab::CEffect* effect = NewGO<prefab::CEffect>(0);//エフェクトの発生
 		//エフェクトを再生。
 		effect->Play(L"effect/MagicShield.efk");
 		//エフェクトの座標
@@ -49,7 +48,15 @@ void Enemy::Shoumetsu()
 		effect->SetPosition(emitPos);
 		//サイズが小さければ後で変更
 
+
+		font->SetText(L"Great");//Greatだぜ。
+	}
+	if (Pad(0).IsTrigger(enButtonB)){//falseの時の処理
+		DeleteGO(this);
+			prefab::CEffect* effect = NewGO<prefab::CEffect>(0);
+			//falseエフェクトの再生
+			effect->Play(L"/*なんかいいのみつけて張り付ける*/");
+			font->SetText(L"false");
 	}
 
 }
-

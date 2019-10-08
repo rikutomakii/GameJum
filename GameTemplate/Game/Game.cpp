@@ -13,7 +13,7 @@ Game::~Game()
 }
 bool Game::Start()
 {	
-	//NewGO<Enemy>(0);
+	NewGO<Enemy>(0);
 	return true;
 }
 

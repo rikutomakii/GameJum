@@ -7,7 +7,7 @@ public:
 	bool Start();
 	void Update();
 	prefab::CSkinModelRender* m_SkinModelRender = nullptr;
-	//CQuaternion enemyKaiten = CQuaternion::Identity;
+	CQuaternion enemyKaiten = CQuaternion::Identity;
 	CVector3 enemyPos = {0.0f,0.0f,-100.0f};
 	CVector3 effectPos = CVector3::Zero;
 	prefab::CFontRender* font = nullptr;
