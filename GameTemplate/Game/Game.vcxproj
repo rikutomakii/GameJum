@@ -1787,6 +1787,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Middle|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Low|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Titlescene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BackGround.h" />
@@ -1795,30 +1796,24 @@
     <ClInclude Include="Game.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Titlescene.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MeshContentTask Include="Assets\modelData\Door1.FBX" />
-    <MeshContentTask Include="Assets\modelData\Door2.FBX" />
-    <MeshContentTask Include="Assets\modelData\dor.FBX" />
-    <MeshContentTask Include="Assets\modelData\dor2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
-    <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\sound\pushSound.wav" />
+    <ImageContentTask Include="Assets\sprite\maou taitoru.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\effect\blood.efk" />
-    <None Include="Assets\effect\kieru.efk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\sprite\gameClear.png" />
-    <Image Include="Assets\sprite\title.png" />
+    <Media Include="Assets\sound\famima2.wav" />
+    <Media Include="Assets\sound\mens-yeah1.wav" />
+    <Media Include="Assets\sound\tin1.wav" />
+    <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
