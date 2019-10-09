@@ -69,4 +69,9 @@
       <Filter>Assets\sound</Filter>
     </Media>
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{a7b51687-d3ac-488f-a5ae-517dbbf3bf1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>
