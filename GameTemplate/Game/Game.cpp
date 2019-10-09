@@ -23,7 +23,8 @@ NewGO<Enemy>(0);//カメラを設定。
 	////スキンモデルレンダラーを作成。
 	//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	//m_skinModelRender->Init(L"modelData/unityChan.cmo");
-	//m_skinModelRender->SetPosition({ 0.0f,0.0f,1.0f });	return true;
+	//m_skinModelRender->SetPosition({ 0.0f,0.0f,1.0f });	
+	return true;
 }
 
 void Game::Update()
