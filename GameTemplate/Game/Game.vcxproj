@@ -1762,6 +1762,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Door.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
@@ -1787,6 +1788,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Door.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <CLInclude Include="resource.h" />
@@ -1794,6 +1796,10 @@
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
+    <MeshContentTask Include="Assets\modelData\Door1.FBX" />
+    <MeshContentTask Include="Assets\modelData\Door2.FBX" />
+    <MeshContentTask Include="Assets\modelData\dor.FBX" />
+    <MeshContentTask Include="Assets\modelData\dor2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
     <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
@@ -1806,6 +1812,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\effect\blood.efk" />
+    <None Include="Assets\effect\kieru.efk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\gameClear.png" />
+    <Image Include="Assets\sprite\title.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
