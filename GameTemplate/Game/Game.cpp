@@ -15,10 +15,10 @@ Game::~Game()
 }
 bool Game::Start()
 {
-	NewGO<Enemy>(0);//カメラを設定。
-
 	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
 	MainCamera().SetPosition({ -80.0f, 80.0f, 150.0f });
+	//NewGO<BackGround>(0);
+	NewGO<Enemy>(0);
 
 
 	////スキンモデルレンダラーを作成。
@@ -31,4 +31,7 @@ bool Game::Start()
 void Game::Update()
 {
 	MainCamera().Update();
+	m_timer = GameTime().GetFrameDeltaTime();
+	
+	
 }

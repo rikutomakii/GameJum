@@ -25,6 +25,7 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Titlescene.cpp" />
     <ClCompile Include="Door.cpp" />
+    <ClCompile Include="BackGround.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -35,6 +36,7 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Titlescene.h" />
     <ClInclude Include="Door.h" />
+    <ClInclude Include="BackGround.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -48,6 +50,7 @@
     <MeshContentTask Include="Assets\modelData\hospital.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\haikei.FBX" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
@@ -70,6 +73,7 @@
     <Media Include="Assets\sound\famima2.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+    <Media Include="Assets\sound\coinGet.wav" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
