@@ -27,8 +27,8 @@ void Door::Update()
 	
 	m_timer++;
 	if (Pad(0).IsPressAnyKey()) {
-		m_position.x -= 5.0f;
-		m_position2.x += 5.0f;
+		m_position.x += 5.0f;
+		m_position2.x -= 5.0f;
 	}
 	m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender2->SetPosition(m_position2);
