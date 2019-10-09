@@ -1800,6 +1800,9 @@
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\pushSound.wav" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />
