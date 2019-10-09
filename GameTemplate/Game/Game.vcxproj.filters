@@ -14,6 +14,9 @@
     <Filter Include="Assets\sprite">
       <UniqueIdentifier>{a6ce300a-b532-440d-b914-b4661d3015ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\sound">
+      <UniqueIdentifier>{06982e86-9bef-406a-99d3-c6452326e8bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -43,7 +46,7 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\hospital.FBX">
-      <Filter>Assets\modelData</Filter>
+<MeshContentTask Include="Assets\modelData\Enemy.FBX">  </ItemGroup>  <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\dor.FBX">
       <Filter>Assets\modelData</Filter>
@@ -57,10 +60,17 @@
     <MeshContentTask Include="Assets\modelData\Door1.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
-  </ItemGroup>
-  <ItemGroup>
+  </ItemGroup>  <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\pushSound.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\effect\blood.efk" />
   </ItemGroup>
 </Project>
