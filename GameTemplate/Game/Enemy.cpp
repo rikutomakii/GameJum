@@ -23,9 +23,10 @@ bool Enemy::Start()
 
 void Enemy::Update()
 {
+	enemyMove();
+	Shoumetsu();
+
 	
-
-
 }
 
 void Enemy::enemyMove()
@@ -35,6 +36,7 @@ void Enemy::enemyMove()
 
 	if (Pad(0).IsPressAnyKey()) {
 		effect = NewGO<prefab::CEffect>(0);
+
 		//エフェクトの座標
 		CVector3 emitPos;
 		//エネミーのポジションを代入。
@@ -53,15 +55,22 @@ void Enemy::Shoumetsu()
 		DeleteGO(this);
 		effect = NewGO<prefab::CEffect>(0);
 		//エフェクトを再生。
-		effect->Play(L"effect/LossOfBlood.efk");
+		effect->Play(L"effect/blood.efk");
 		//エフェクトの座標
 		CVector3 emitPos;
 		//エネミーのポジションを代入。
 		emitPos = enemyPos;
 
 		effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
-	
+		
+		
+		text.x = enemyPos.x;
+		text.y = enemyPos.z;
+		font->SetPosition(text);
 		font->SetText(L"Great");//Greatだぜ。これをenemyの場所でやりたい
+		
+		
+		
 	}
 	if (Pad(0).IsTrigger(enButtonB)){//falseの時の処理
 		DeleteGO(this);
@@ -69,8 +78,11 @@ void Enemy::Shoumetsu()
 			//falseエフェクトの再生
 			effect->Play(L"");//ポイの見つけて張り付ける
 			
+			text.x = enemyPos.x;
+			text.y = enemyPos.z;
+			font->SetPosition(text);
 			font->SetText(L"false");//falseだぜ。これをenemyの場所でやりたい
-
+			
 			//死亡音,後で追加する
 			//m_CSoundSource->Init(L"消える感じがする音");
 	}
