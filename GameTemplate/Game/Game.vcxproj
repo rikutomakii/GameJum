@@ -1813,6 +1813,9 @@
     <Media Include="Assets\sound\tin1.wav" />
     <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\gameClear.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />

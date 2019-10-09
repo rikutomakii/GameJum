@@ -71,4 +71,9 @@
       <Filter>Assets\sound</Filter>
     </Media>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\gameClear.png">
+      <Filter>Assets\sprite</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
