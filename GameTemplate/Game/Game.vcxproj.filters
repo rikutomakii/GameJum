@@ -24,6 +24,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Titlescene.cpp" />
+    <ClCompile Include="result.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -33,6 +34,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Titlescene.h" />
+    <ClInclude Include="result.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -68,10 +70,5 @@
     <Media Include="Assets\sound\famima2.wav">
       <Filter>Assets\sound</Filter>
     </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Assets">
-      <UniqueIdentifier>{a7b51687-d3ac-488f-a5ae-517dbbf3bf1e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
 </Project>

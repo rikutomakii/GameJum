@@ -1765,6 +1765,7 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="result.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Middle|Win32'">Create</PrecompiledHeader>
@@ -1791,6 +1792,7 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <CLInclude Include="resource.h" />
+    <ClInclude Include="result.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Titlescene.h" />
     <ResourceCompile Include="Game.rc" />
