@@ -1,44 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ImageContentTask Include="Assets\sprite\dummy.png" />
+    <Filter Include="Assets">
+      <UniqueIdentifier>{ed0b04a6-fecd-4a2c-a462-59a8f4639f36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Assets\modelData">
+      <UniqueIdentifier>{06086914-6aa4-4cad-9b07-6f9d357f04df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\sprite">
+      <UniqueIdentifier>{a6ce300a-b532-440d-b914-b4661d3015ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\sound">
+      <UniqueIdentifier>{24aaa9d6-958b-489b-b09d-bc0389ac041f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Titlescene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <MeshContentTask Include="Assets\modelData\hospital.FBX" />
-    <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
-    <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
-    <MeshContentTask Include="Assets\modelData\dor2.FBX" />
-    <MeshContentTask Include="Assets\modelData\Door1.FBX" />
-    <MeshContentTask Include="Assets\modelData\Door2.FBX" />
-    <MeshContentTask Include="Assets\modelData\dor.FBX" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Game.h" />
-    <CLInclude Include="resource.h" />
+    <CLInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </CLInclude>
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Door.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Titlescene.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Game.rc" />
+    <ResourceCompile Include="Game.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\sound\pushSound.wav" />
+    <MeshContentTask Include="Assets\modelData\unityChan.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\hospital.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\effect\blood.efk" />
-    <None Include="Assets\effect\kieru.efk" />
+    <ImageContentTask Include="Assets\sprite\dummy.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\maou taitoru.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assets\sprite\title.png" />
-    <Image Include="Assets\sprite\gameClear.png" />
+    <Media Include="Assets\sound\tin1.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\mens-yeah1.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\famima2.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">

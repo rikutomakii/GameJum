@@ -3,7 +3,7 @@
  */
 #include "stdafx.h"
 #include "Game.h"
-#include"Enemy.h"
+#include "Titlescene.h"
 
 namespace {
 	/*!
@@ -134,12 +134,12 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 	
 #endif
 
+	
+
 	//エンジンを初期化。
 	if (Engine().Init(initParam) == true) {
 		NewGO<Game>(0, nullptr);
-		
-
-
+		NewGO<Titlescene>(0);
 		//ゲームループを実行。
 		Engine().RunGameLoop();
 	}
