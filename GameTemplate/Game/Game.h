@@ -3,7 +3,11 @@
 #include "tkEngine/graphics/effect/tkEffect.h"
 #include "tkEngine/physics/tkPhysicsGhostObject.h"
 #include "tkEngine/character/tkCharacterController.h"
+#include "BackGround.h"
+#include "Door.h"
 
+class Door;
+class BackGround;
 class Game : public IGameObject
 {
 public:
@@ -12,5 +16,8 @@ public:
 	bool Start();
 	void Update();
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
+	BackGround* m_backG = nullptr;
+	Door* m_door = nullptr;
+
 };
 
