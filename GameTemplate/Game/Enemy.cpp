@@ -35,19 +35,8 @@ void Enemy::enemyMove()
 	enemyPos.z += 1;
 	m_SkinModelRender->SetPosition(enemyPos);
 
-	////エフェクトのテレポート
-	//if (Pad(0).IsPressAnyKey()) {
-	//	effect = NewGO<prefab::CEffect>(0);
 
-	//	//エフェクトの座標
-	//	CVector3 emitPos;
-	//	//エネミーのポジションを代入。
-	//	
-	//	effect->Play(L"effect/kieru.efk");
-	//	effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
-	//	enemyPos.z -= 50.0f;
-	//	m_SkinModelRender->SetPosition(enemyPos);
-	//}
+	
 
 }
 
@@ -95,4 +84,10 @@ void Enemy::Shoumetsu()
 	}
 
 
+}
+
+void Enemy::enemyTelepo()
+{
+	//テレポさせるだけ
+	
 }
