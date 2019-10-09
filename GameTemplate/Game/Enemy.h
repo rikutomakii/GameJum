@@ -16,7 +16,7 @@ public:
 	prefab::CSoundSource* m_CSoundSource = nullptr;
 	prefab::CEffect* effect;//エフェクト
 	CVector2 text = CVector2::Zero;
-	
+	void enemyTelepo();
 
 };
 

@@ -24,17 +24,17 @@ bool Door::Start()
 
 void Door::Update()
 {
-	if (DoorFlag == false&& m_position.x ==70&& m_position2.x == -70 )
+	if (DoorFlag == false/*&& m_position.x ==70&& m_position2.x == -70*/ )
 	{
 
-		m_position.x = 0.05f;
-		m_position2.x = -0.05f;
+		/*m_position.x = 0.05f;
+		m_position2.x = -0.05f;*/
 
-		m_skinModelRender->SetPosition(m_position);
-		m_skinModelRender2->SetPosition(m_position2);
+		/*m_skinModelRender->SetPosition(m_position);
+		m_skinModelRender2->SetPosition(m_position2);*/
 
-		/*m_skinModelRender->SetPosition({ 70.0f,0.0f,0.0f });
-		m_skinModelRender2->SetPosition({ -70.0f,0.0f,0.0f });*/
+		m_skinModelRender->SetPosition({ 70.0f,0.0f,0.0f });
+		m_skinModelRender2->SetPosition({ -70.0f,0.0f,0.0f });
 		DoorFlag = true;
 	}
 

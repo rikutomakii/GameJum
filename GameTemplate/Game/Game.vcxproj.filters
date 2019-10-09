@@ -25,6 +25,8 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Titlescene.cpp" />
     <ClCompile Include="result.cpp" />
+    <ClCompile Include="BackGround.cpp" />
+    <ClCompile Include="Door.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -35,6 +37,8 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Titlescene.h" />
     <ClInclude Include="result.h" />
+    <ClInclude Include="BackGround.h" />
+    <ClInclude Include="Door.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -48,6 +52,9 @@
     <MeshContentTask Include="Assets\modelData\hospital.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Door2.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
@@ -56,6 +63,7 @@
     <ImageContentTask Include="Assets\sprite\maou taitoru.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\gameClear.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\tin1.wav">
@@ -70,10 +78,5 @@
     <Media Include="Assets\sound\famima2.wav">
       <Filter>Assets\sound</Filter>
     </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\sprite\gameClear.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
   </ItemGroup>
 </Project>

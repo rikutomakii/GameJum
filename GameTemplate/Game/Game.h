@@ -6,6 +6,7 @@
 #include "BackGround.h"
 #include "Door.h"
 
+class Enemy;
 class Door;
 class BackGround;
 class Game : public IGameObject
@@ -18,6 +19,7 @@ public:
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 	BackGround* m_backG = nullptr;
 	Door* m_door = nullptr;
+
 
 };
 
