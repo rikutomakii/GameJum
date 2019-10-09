@@ -89,5 +89,6 @@ void Enemy::Shoumetsu()
 void Enemy::enemyTelepo()
 {
 	//ƒeƒŒƒ|‚³‚¹‚é‚¾‚¯
+	CVector3 enemyTerepo = CVector3::Zero;
 	
 }
