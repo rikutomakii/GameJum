@@ -4,29 +4,27 @@
     <ImageContentTask Include="Assets\sprite\dummy.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BackGround.cpp" />
-    <ClCompile Include="Door.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Door.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <MeshContentTask Include="Assets\modelData\Door1.FBX" />
-    <MeshContentTask Include="Assets\modelData\Door2.FBX" />
-    <MeshContentTask Include="Assets\modelData\dor.FBX" />
-    <MeshContentTask Include="Assets\modelData\dor2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
     <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
+    <MeshContentTask Include="Assets\modelData\dor2.FBX" />
+    <MeshContentTask Include="Assets\modelData\Door1.FBX" />
+    <MeshContentTask Include="Assets\modelData\Door2.FBX" />
+    <MeshContentTask Include="Assets\modelData\dor.FBX" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BackGround.h" />
-    <ClInclude Include="Door.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Door.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc" />
@@ -36,5 +34,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\effect\blood.efk" />
+    <None Include="Assets\effect\kieru.efk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\title.png" />
+    <Image Include="Assets\sprite\gameClear.png" />
   </ItemGroup>
 </Project>
