@@ -9,13 +9,15 @@ BackGround::BackGround()
 
 BackGround::~BackGround()
 {
+	DeleteGO(m_backGround);
 }
 
 bool BackGround::Start()
 {
+	/*m_backGround = NewGO<prefab::CSkinModelRender>(0);
+	m_backGround->Init(L"modelData/hospital.cmo");*/
 	m_backGround = NewGO<prefab::CSkinModelRender>(0);
-	m_backGround->Init(L"modelData/hospital.cmo");
-
+	m_backGround->Init(L"modelData/haikei.cmo");
 
 
 	return true;

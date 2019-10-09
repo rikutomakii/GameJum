@@ -15,7 +15,7 @@ public:
 	void enemyMove();//エネミーが動くやつ
 	prefab::CSoundSource* m_CSoundSource = nullptr;
 	prefab::CEffect* effect;//エフェクト
-	CVector2 text = CVector2::Zero;
+	CVector2 text = CVector2::Zero;//テキストのポジション
 	void enemyTelepo();
 
 };

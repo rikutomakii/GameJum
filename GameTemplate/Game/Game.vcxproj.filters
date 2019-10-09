@@ -50,6 +50,7 @@
     <MeshContentTask Include="Assets\modelData\hospital.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\haikei.FBX" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
@@ -72,6 +73,7 @@
     <Media Include="Assets\sound\famima2.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+    <Media Include="Assets\sound\coinGet.wav" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
