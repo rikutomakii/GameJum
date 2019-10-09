@@ -1785,12 +1785,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Middle|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Low|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Titlescene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Titlescene.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
@@ -1799,6 +1801,15 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\maou taitoru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\famima2.wav" />
+    <Media Include="Assets\sound\mens-yeah1.wav" />
+    <Media Include="Assets\sound\tin1.wav" />
+    <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

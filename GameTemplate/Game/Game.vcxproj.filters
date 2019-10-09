@@ -14,12 +14,16 @@
     <Filter Include="Assets\sprite">
       <UniqueIdentifier>{a6ce300a-b532-440d-b914-b4661d3015ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\sound">
+      <UniqueIdentifier>{24aaa9d6-958b-489b-b09d-bc0389ac041f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Titlescene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -28,6 +32,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Titlescene.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -46,5 +51,22 @@
     <ImageContentTask Include="Assets\sprite\dummy.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\maou taitoru.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\tin1.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\mens-yeah1.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\famima2.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>
