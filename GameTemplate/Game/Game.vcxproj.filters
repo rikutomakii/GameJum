@@ -24,9 +24,11 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Titlescene.cpp" />
-    <ClCompile Include="result.cpp" />
-    <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="Door.cpp" />
+    <ClCompile Include="BackGround.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
+    <ClCompile Include="Geezi.cpp" />
+    <ClCompile Include="result.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -36,9 +38,11 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Titlescene.h" />
-    <ClInclude Include="result.h" />
-    <ClInclude Include="BackGround.h" />
     <ClInclude Include="Door.h" />
+    <ClInclude Include="BackGround.h" />
+    <ClInclude Include="Enemy2.h" />
+    <ClInclude Include="Geezi.h" />
+    <ClInclude Include="result.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -52,10 +56,8 @@
     <MeshContentTask Include="Assets\modelData\hospital.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\Door2.FBX">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\byouin3.FBX">
+    <MeshContentTask Include="Assets\modelData\Door2.FBX" />
+    <MeshContentTask Include="Assets\modelData\sirusi.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -67,6 +69,15 @@
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
     <ImageContentTask Include="Assets\sprite\gameClear.png" />
+    <ImageContentTask Include="Assets\sprite\geezi1.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\geezi2.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\GameOver.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\tin1.wav">
@@ -83,8 +94,8 @@
     </Media>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assets\sprite\famima.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{a7b51687-d3ac-488f-a5ae-517dbbf3bf1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

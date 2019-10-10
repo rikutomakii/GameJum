@@ -1765,7 +1765,9 @@
     <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="Door.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Geezi.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="result.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -1794,7 +1796,9 @@
     <ClInclude Include="BackGround.h" />
     <ClInclude Include="Door.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Geezi.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="result.h" />
     <ClInclude Include="stdafx.h" />
@@ -1802,9 +1806,9 @@
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MeshContentTask Include="Assets\modelData\byouin3.FBX" />
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
+    <MeshContentTask Include="Assets\modelData\sirusi.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>
@@ -1823,7 +1827,11 @@
     <ImageContentTask Include="Assets\sprite\gameClear.png" />
   </ItemGroup>
   <ItemGroup>
-    <ImageContentTask Include="Assets\sprite\famima.png" />
+    <ImageContentTask Include="Assets\sprite\geezi1.png" />
+    <ImageContentTask Include="Assets\sprite\geezi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\GameOver.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
