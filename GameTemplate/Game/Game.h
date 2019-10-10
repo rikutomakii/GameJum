@@ -6,6 +6,7 @@
 #include "BackGround.h"
 #include "Door.h"
 #include "Enemy.h"
+#include "Geezi.h"
 class Enemy;
 class Door;
 class BackGround;
@@ -19,6 +20,8 @@ public:
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 	BackGround* m_backG = nullptr;
 	Door* m_door = nullptr;
+	Geezi* m_geezi = nullptr;
+
 	int r = rand()%800;
 	int startFlag = 0;
 	int count = 0;
