@@ -14,10 +14,14 @@ public:
 	void Shoumetsu();//消えるときのヤツ
 	void enemyMove();//エネミーが動くやつ
 	prefab::CSoundSource* m_CSoundSource = nullptr;
-	prefab::CEffect* effect;//エフェクト
+
+	
+	prefab::CEffect* effect2 = NewGO<prefab::CEffect>(0);
+
 	CVector2 text = CVector2::Zero;//テキストのポジション
 	int enemyPatarn = 0;
 	CVector3 scale = CVector3::One;//スキンサイズ
+	
 
 };
 
