@@ -37,25 +37,6 @@ bool Door::Start()
 void Door::Update()
 {
 	
-
-	/*if (DoorFlag == false) {*/
-	
-	/*if (m_position.x = 0.0f >= 70.0f) {*/
-		
-	
-
-		
-	//}
-
-
-
-	//}
-		/*if (m_position.x >= 70 && m_position2.x >= -70) {
-
-	}*/
-
-	
-	//Titlescene* m_title = FindGO<Titlescene>("title");
 	
 	if (Pad(0).IsPressAnyKey()) {
 		m_position.x = 16.0f;
