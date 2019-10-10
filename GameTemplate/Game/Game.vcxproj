@@ -1767,7 +1767,9 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Geezi.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="result.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Middle|Win32'">Create</PrecompiledHeader>
@@ -1796,13 +1798,15 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Geezi.h" />
     <CLInclude Include="resource.h" />
+    <ClInclude Include="result.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Titlescene.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MeshContentTask Include="Assets\modelData\haikei.FBX" />
+    <MeshContentTask Include="Assets\modelData\Door2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
@@ -1813,11 +1817,13 @@
     <ImageContentTask Include="Assets\sprite\maou taitoru.png" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\sound\coinGet.wav" />
     <Media Include="Assets\sound\famima2.wav" />
     <Media Include="Assets\sound\mens-yeah1.wav" />
     <Media Include="Assets\sound\tin1.wav" />
     <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\gameClear.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

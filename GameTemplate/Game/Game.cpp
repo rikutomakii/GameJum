@@ -13,16 +13,10 @@ Game::Game()
 Game::~Game()
 {
 }
-bool Game::Start()
-{
+bool Game::Start(){
 	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
 	MainCamera().SetPosition({ -80.0f, 80.0f, 150.0f });
-	MainCamera().SetFar(100000.0f);//‰•½–Ê‚ğ’Ç‰Á
-	//NewGO<BackGround>(0);//‚È‚ñ‚©‚Î‚®‚Á‚Ä‚½‚©‚çŒã‚Å¡‚·
 
-	NewGO<Enemy>(0);
-	// GameTime().GetFrameDeltaTime();
-	
 	
 	return true;
 }
@@ -30,14 +24,11 @@ bool Game::Start()
 void Game::Update()
 {
 	MainCamera().Update();
-	count++;
+count++;
 	startFlag++;
 	if (startFlag > 70 &&
 		count >= r) {
 		NewGO<Enemy>(0);
 		startFlag = 0;
 		count = 0;
-	}
-
-}
-
+	}}
