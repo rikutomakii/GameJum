@@ -22,5 +22,7 @@ public:
 	int r = rand()%800;
 	int startFlag = 0;
 	int count = 0;
+
+	bool StartFlag = false;
 };
 

@@ -5,7 +5,7 @@
 
 Game::Game()
 {
-	//m_backG = NewGO<BackGround>(0, "backG");
+	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 }
 
@@ -18,6 +18,9 @@ bool Game::Start(){
 	MainCamera().SetPosition({ -80.0f, 80.0f, 150.0f });
 
 	
+
+	StartFlag = true;
+
 	return true;
 }
 
