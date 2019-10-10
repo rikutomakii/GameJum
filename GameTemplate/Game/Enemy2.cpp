@@ -11,10 +11,9 @@ bool Enemy2::Start()
 {
 	//enemyPatarn = rand() %  1;
 	m_SkinModelRender = NewGO<prefab::CSkinModelRender>(0);//スキンモデルレンダー
-	m_SkinModelRender->Init(L"modelData/Enemy.cmo");//後で帰るモデルデータ
-	font = NewGO<prefab::CFontRender>(0);//文字出すやつ
-	m_CSoundSource = NewGO<prefab::CSoundSource>(0);//音出すやつ
-
+	m_SkinModelRender->Init(L"modelData/lastEnemy.cmo");//後で帰るモデルデータ
+	//font = NewGO<prefab::CFontRender>(0);//文字出すやつ
+	//m_CSoundSource = NewGO<prefab::CSoundSource>(0);//音出すやつ
 	effect = NewGO<prefab::CEffect>(0);//こっからエフェクト
 	return true;
 }
@@ -53,11 +52,11 @@ void Enemy2::enemyShoumetsu()
 
 		effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
 
-		font->SetPosition(text);
-		font->SetText(L"Great");//Greatだぜ。これをenemyの場所でやりたい
-		DeleteGO(font);
+		//font->SetPosition(text);
+		//font->SetText(L"Great");//Greatだぜ。これをenemyの場所でやりたい
+		//DeleteGO(font);
 
-		DeleteGO(this);
+		//DeleteGO(this);
 
 
 
