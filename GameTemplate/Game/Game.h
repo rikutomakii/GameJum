@@ -5,7 +5,7 @@
 #include "tkEngine/character/tkCharacterController.h"
 #include "BackGround.h"
 #include "Door.h"
-
+#include "Enemy.h"
 class Enemy;
 class Door;
 class BackGround;
@@ -19,8 +19,8 @@ public:
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 	BackGround* m_backG = nullptr;
 	Door* m_door = nullptr;
-	int m_timer;
-
-
+	int r = 0;
+	int startFlag = 0;
+	int count = 0;
 };
 
