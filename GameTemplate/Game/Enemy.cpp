@@ -3,6 +3,7 @@
 
 Enemy::Enemy()
 {
+
 }
 
 Enemy::~Enemy()
@@ -27,13 +28,11 @@ void Enemy::Update()
 {
 	enemyMove();
 	Shoumetsu();
-
-	
 }
 
 void Enemy::enemyMove()
 {
-	enemyPos.z += 2;
+	enemyPos.z += 10;
 	
 	m_SkinModelRender->SetPosition(enemyPos);
 
@@ -44,8 +43,8 @@ void Enemy::Shoumetsu()
 
 	//タイミングよく消せたとき
 	if (Pad(0).IsTrigger(enButtonA)&&
-		enemyPos.z >=-10.0&& 
-		enemyPos.z <= 10.0 ){     
+		enemyPos.z >=-15.0&& 
+		enemyPos.z <= 15.0 ){     
 		DeleteGO(this);//エネミースキンの破棄
 		
 		//エフェクトを再生。
@@ -62,8 +61,6 @@ void Enemy::Shoumetsu()
 		//DeleteGO(font);
 
 		//DeleteGO(this);
-		//
-
 
 	}
 
@@ -92,17 +89,12 @@ void Enemy::Shoumetsu()
 	//速くたたきすぎた時
 
 	if (Pad(0).IsTrigger(enButtonA) &&
-		enemyPos.z > 10.0f&&
-		enemyPos.z < 20.0f) {
+		enemyPos.z > 15.0f&&
+		enemyPos.z < 25.0f) {
 		DeleteGO(this);
 
-		font->SetText(L"false");//falseだぜ。
-		DeleteGO(font);
-		DeleteGO(this);
+		//font->SetText(L"false");//falseだぜ。
+		/*DeleteGO(font);
+		DeleteGO(this);*/
 	}
-}
-
-void Enemy::boostEnemy()
-{
-	enemyPos.z--;
 }

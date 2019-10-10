@@ -35,4 +35,5 @@ count++;
 		NewGO<Enemy>(0);
 		startFlag = 0;
 		count = 0;
-	}}
+	}
+}
