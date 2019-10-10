@@ -32,8 +32,9 @@ void Enemy::Update()
 
 void Enemy::enemyMove()
 {
-	enemyPos.z += 1;
+	enemyPos.z += 2;
 	m_SkinModelRender->SetPosition(enemyPos);
+	
 
 }
 
@@ -41,8 +42,9 @@ void Enemy::Shoumetsu()
 {
 
 	//タイミングよく消せたとき
-	if (Pad(0).IsTrigger(enButtonA)//ドアで挟まれたときってやつに変える
-		&&5>=enemyPos.z >=-5){     //5  -5の間で判定 
+	if (Pad(0).IsTrigger(enButtonA)&&
+		enemyPos.z >=-10.0&& 
+		enemyPos.z <= 10.0 ){     
 		DeleteGO(this);//エネミースキンの破棄
 		
 		//エフェクトを再生。
@@ -60,6 +62,8 @@ void Enemy::Shoumetsu()
 
 		DeleteGO(this);
 		
+
+
 	}
 
 	//通り過ぎた時
@@ -75,15 +79,14 @@ void Enemy::Shoumetsu()
 			text.x = enemyPos.x;
 			text.y = enemyPos.z-100;
 			font->SetPosition(text);
-			font->SetText(L"false");//falseだぜ。これをenemyの場所でやりたい
+			font->SetText(L"false");//falseだぜ。
 			DeleteGO(font);
 			DeleteGO(this);
 			
 			//死亡音,後で追加する
 			m_CSoundSource->Init(L"sound/coinGet.wav");
+			
 	}
-
-
 }
 
 void Enemy::enemyTelepo()
