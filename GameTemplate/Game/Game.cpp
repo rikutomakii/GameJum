@@ -6,9 +6,11 @@
 
 Game::Game()
 {
-	//m_backG = NewGO<BackGround>(0, "backG");
+	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
+	m_rs = NewGO<result>(0, "result");
+	//->SetTime(m_timer)
 }
 
 

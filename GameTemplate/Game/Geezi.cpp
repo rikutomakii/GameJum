@@ -28,4 +28,5 @@ bool Geezi::Start()
 
 void Geezi::Update()
 {
+	m_spriteRender2->SetScale(scale);
 }
