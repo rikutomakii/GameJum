@@ -24,8 +24,9 @@ public:
 	Door* m_door = nullptr;
 	Geezi* m_geezi = nullptr;
 
-	int r = rand()%400;
-CFont m_fontTest;	int startFlag = 0;
+	int r = rand()%200;
+	CFont m_fontTest;	
+	int startFlag = 0;
 	int count = 0;
 	float m_timer = 91.0f;
 

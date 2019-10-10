@@ -19,7 +19,7 @@ bool Game::Start(){
 	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
 	MainCamera().SetPosition({ -80.0f, 150.0f, 150.0f });
 
-	
+	NewGO<Enemy>(0);
 
 	StartFlag = true;
 
@@ -35,10 +35,12 @@ count++;
 		count >= r) {
 		
 		NewGO<Enemy>(0);
-		startFlag = rand()%400;
+		startFlag = 0;
+		r = rand() % 200;
 		count = 0;
 	}
 }
+
 void Game::PostRender(CRenderContext& rc)
 {
 	if (StartFlag == true) {
