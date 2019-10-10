@@ -29,6 +29,7 @@ bool Door::Start()
 	m_skinModelRender->SetPosition({ 70.0f,0.0f,0.0f });
 	m_skinModelRender2->SetPosition({ -70.0f,0.0f,0.0f });
 	
+	
 
 	
 	return true;
@@ -37,13 +38,25 @@ bool Door::Start()
 void Door::Update()
 {
 	
+
+	Game* gm = FindGO<Game>("Game");
 	
-	if (Pad(0).IsPressAnyKey()) {
+	if (Pad(0).IsPressAnyKey()/*&&gm->StartFlag == true*/) {
+		m_timer++;
 		m_position.x = 16.0f;
 		m_position2.x = -16.0f;
 		m_skinModelRender->SetPosition(m_position);
 		m_skinModelRender2->SetPosition(m_position2);
+		if (m_timer >= 360) {
+			ss = NewGO<prefab::CSoundSource>(0);
+
+			ss->Init(L"sound/famima2.wav");
+			ss->Play(false);
+		}
 		DoorFlag = true;
+
+		
+		
 	}
 	
 	if (DoorFlag == true) {
@@ -51,8 +64,11 @@ void Door::Update()
 		m_position2.x -= 2.0f;
 		m_skinModelRender->SetPosition(m_position);
 		m_skinModelRender2->SetPosition(m_position2);
+		
 		if (m_position.x == 70) {
 			DoorFlag = false;
+			
+			
 		}
 	}
 	

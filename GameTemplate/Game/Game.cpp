@@ -5,7 +5,7 @@
 
 Game::Game()
 {
-	//m_backG = NewGO<BackGround>(0, "backG");
+	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 }
 
@@ -21,6 +21,9 @@ bool Game::Start(){
 	//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	//m_skinModelRender->Init(L"modelData/unityChan.cmo");
 	//m_skinModelRender->SetPosition({ 0.0f,0.0f,1.0f });	
+
+	StartFlag = true;
+
 	return true;
 }
 
