@@ -20,7 +20,7 @@ bool Titlescene::Start()
 {
 	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
 	//タイトル画面をロード
-	m_spriteRender->Init(L"sprite/maou taitoru.dds", 1280.0f, 720.0f);
+	m_spriteRender->Init(L"sprite/famima.dds", 1280.0f, 720.0f);
 	
 
 	m_cfontrender = NewGO<prefab::CFontRender>(0);

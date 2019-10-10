@@ -3,7 +3,7 @@
 #include "Enemy.h"
 #include "Enemy2.h"
 #include "tkEngine/light/tkDirectionLight.h"
-
+#include "result.h"
 Game::Game()
 {
 	//m_backG = NewGO<BackGround>(0, "backG");
@@ -28,6 +28,14 @@ bool Game::Start(){
 
 void Game::Update()
 {
+	if (Pad(0).IsPress(enButtonY)) {
+		//GameSceneのインスタンスを生成
+		NewGO<result>(0, "result");
+		//シーンが切り替わるのでTitlsSceneのインスタンスを削除
+		DeleteGO(this);
+	}
+
+
 	MainCamera().Update();
 count++;
 	startFlag++;
