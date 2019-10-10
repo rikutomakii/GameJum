@@ -19,7 +19,7 @@ public:
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 	BackGround* m_backG = nullptr;
 	Door* m_door = nullptr;
-	int r = 0;
+	int r = rand()%800;
 	int startFlag = 0;
 	int count = 0;
 };

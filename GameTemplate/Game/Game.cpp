@@ -5,7 +5,7 @@
 
 Game::Game()
 {
-	m_backG = NewGO<BackGround>(0, "backG");
+	//m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 }
 
@@ -23,30 +23,21 @@ bool Game::Start()
 	NewGO<Enemy>(0);
 	// GameTime().GetFrameDeltaTime();
 	
-	////スキンモデルレンダラーを作成。
-	//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	//m_skinModelRender->Init(L"modelData/unityChan.cmo");
-	//m_skinModelRender->SetPosition({ 0.0f,0.0f,1.0f });	
+	
 	return true;
 }
 
 void Game::Update()
 {
-
 	MainCamera().Update();
-	//タイミングずらしてNewGO
-	startFlag = GameTime().GetFrameDeltaTime();
 	count++;
-	 r = rand() % 144;
-	 if (r == 0) {
-		 r = 1;
-	 }
-	if (startFlag >= 0.2 &&
-		count >=144) {
+	startFlag++;
+	if (startFlag > 70 &&
+		count >= r) {
 		NewGO<Enemy>(0);
-		count = 0;
 		startFlag = 0;
-		r = 0;
+		count = 0;
 	}
+
 }
 
