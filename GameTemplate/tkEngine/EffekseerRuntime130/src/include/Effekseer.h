@@ -37,6 +37,7 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include "..\..\..\..\Game\Effect.h"
 #endif
 
 //----------------------------------------------------------------------------------
@@ -1248,6 +1249,11 @@ class Effect
 protected:
 	Effect() {}
     ~Effect() {}
+
+	inline bool Effect::Start()
+	{
+		return true;
+	}
 
 public:
 
