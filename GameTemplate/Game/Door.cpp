@@ -40,9 +40,9 @@ void Door::Update()
 	
 
 	Game* gm = FindGO<Game>("Game");
-	
+	m_timer++;
 	if (Pad(0).IsPressAnyKey()/*&&gm->StartFlag == true*/) {
-		m_timer++;
+		
 		m_position.x = 16.0f;
 		m_position2.x = -16.0f;
 		m_skinModelRender->SetPosition(m_position);
@@ -52,6 +52,7 @@ void Door::Update()
 
 			ss->Init(L"sound/famima2.wav");
 			ss->Play(false);
+			m_timer = 0;
 		}
 		DoorFlag = true;
 
