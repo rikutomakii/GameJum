@@ -30,17 +30,15 @@ void Enemy2::Update()
 void Enemy2::EnemyMove()
 {
 	enemy2Pos.z += 10;
-	
-
 }
 
 void Enemy2::enemyShoumetsu()
 {
 
 	//タイミングよく消せたとき
-	if (Pad(0).IsTrigger(enButtonA) &&
-		enemy2Pos.z >= -10.0 &&
-		enemy2Pos.z <= 10.0) {
+	if (Pad(0).IsPress(enButtonA) &&
+		enemy2Pos.z >= -15.0 &&
+		enemy2Pos.z <= 15.0) {
 		DeleteGO(this);//エネミースキンの破棄
 
 		//エフェクトを再生。
@@ -53,13 +51,18 @@ void Enemy2::enemyShoumetsu()
 		effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
 
 		//font->SetPosition(text);
-		//font->SetText(L"Great");//Greatだぜ。これをenemyの場所でやりたい
+		//font->SetText(L"Great");
 		//DeleteGO(font);
 
-		//DeleteGO(this);
 
 
+		//速くたたきすぎた時
 
+		if (Pad(0).IsPress(enButtonA) &&
+			enemy2Pos.z > 15.0f &&
+			enemy2Pos.z < 25.0f) {
+			DeleteGO(this);
+		}
 	}
 }
 

@@ -13,5 +13,6 @@ class Enemy2 : public IGameObject
 	prefab::CFontRender* font = nullptr;
 	prefab::CEffect* effect;//エフェクト
 	CVector2 text = CVector2::Zero;//テキストのポジション
+	int enemyCount = 0;
 };
 

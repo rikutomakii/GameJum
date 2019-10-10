@@ -43,8 +43,8 @@ void Enemy::Shoumetsu()
 
 	//タイミングよく消せたとき
 	if (Pad(0).IsTrigger(enButtonA)&&
-		enemyPos.z >=-15.0&& 
-		enemyPos.z <= 15.0 ){     
+		enemyPos.z >=-20.0&& 
+		enemyPos.z <= 20.0 ){     
 		DeleteGO(this);//エネミースキンの破棄
 		
 		//エフェクトを再生。
