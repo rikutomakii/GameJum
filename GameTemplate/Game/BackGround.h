@@ -12,6 +12,7 @@ public:
 	CQuaternion m_rotation = CQuaternion::Identity;
 	CVector3 m_scale = CVector3::One;
 	CPhysicsStaticObject stateObject;
+	
 
 
 };

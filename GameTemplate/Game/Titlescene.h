@@ -15,5 +15,6 @@ public:
 	prefab::CSpriteRender* m_spriteRender = nullptr;
 	CVector3 fontColor = { 1.0f, 1.0f, 1.0f };
 	bool ColorCheng = false;
+	bool StartFlag = false;
 };
 

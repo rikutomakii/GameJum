@@ -5,7 +5,7 @@
 
 Game::Game()
 {
-	//m_backG = NewGO<BackGround>(0, "backG");
+	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 }
 

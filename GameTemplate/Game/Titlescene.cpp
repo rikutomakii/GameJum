@@ -57,7 +57,7 @@ void Titlescene::Update()
 	if (Pad(0).IsPressAnyKey()) {
 		//GameSceneのインスタンスを生成
 		NewGO<Game>(0, "Game");
-
+		
 		//GameSceneのインスタンスを生成
 		ss = NewGO<prefab::CSoundSource>(0);
 

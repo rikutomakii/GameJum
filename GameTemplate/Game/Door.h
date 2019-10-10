@@ -1,4 +1,6 @@
 #pragma once
+#include "Titlescene.h"
+class Titlescene;
 class Door : public IGameObject
 {
 public:
@@ -12,9 +14,16 @@ public:
 
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_position2 = CVector3::Zero;
+	CVector3 m_position3 = CVector3::Zero;
+	CVector3 m_position4 = CVector3::Zero;
+
 	float m_timer = 0.0f;
 	bool DoorFlag = false;
 	bool DoorFlag2 = false;
+
+
+
+	//TitleScene*  m_title = nullptr;
 	
 };
 
