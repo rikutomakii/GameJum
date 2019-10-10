@@ -43,18 +43,25 @@ void Enemy::Shoumetsu()
 
 	//タイミングよく消せたとき
 	if (Pad(0).IsTrigger(enButtonA)&&
-		enemyPos.z >=-20.0&& 
-		enemyPos.z <= 20.0 ){     
+		enemyPos.z >=-30.0&& 
+		enemyPos.z <= 30.0 ){     
 		DeleteGO(this);//エネミースキンの破棄
+		scale *= 20.0f;
+		effect->SetScale(scale);
 		
+		CVector3 emitPos;
+		emitPos = enemyPos;
+		
+		effectPos = enemyPos;
+		effect->SetPosition(effectPos);
+		effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
+
 		//エフェクトを再生。
 		effect->Play(L"effect/blood.efk");
 		//エフェクトの座標
-		CVector3 emitPos;
+		
 		//エフェクトにエネミーのポジションを代入。
-		emitPos = enemyPos;
-
-		effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
+		
 		
 		//font->SetPosition(text);
 		//font->SetText(L"Great");//Greatだぜ。これをenemyの場所でやりたい
@@ -65,13 +72,15 @@ void Enemy::Shoumetsu()
 	}
 
 	//通り過ぎた時
-	if (enemyPos.z >= 50){//falseの時の処理 z = 50ぐらい
+	if (enemyPos.z >= 110){//falseの時の処理 z = 50ぐらい
 		DeleteGO(this);
 			prefab::CEffect* effect = NewGO<prefab::CEffect>(0);
 			//falseエフェクトの再生
-
+			scale *= 20.0f;
+			effect->SetScale(scale);
 			effectPos = enemyPos;
 			effect->SetPosition(effectPos);
+			
 			effect->Play(L"effect/kieru.efk");//ポイの見つけて張り付ける
 			
 			//text.x = enemyPos.x;
@@ -89,10 +98,12 @@ void Enemy::Shoumetsu()
 	//速くたたきすぎた時
 
 	if (Pad(0).IsTrigger(enButtonA) &&
-		enemyPos.z > 15.0f&&
-		enemyPos.z < 25.0f) {
+		enemyPos.z > 30.0f&&
+		enemyPos.z < -30.0f) {
 		DeleteGO(this);
-
+		CVector3 scale2 = CVector3::One;//スキンサイズ
+		scale2 *= 20.0f;
+		effect->SetScale(scale2);
 		//font->SetText(L"false");//falseだぜ。
 		/*DeleteGO(font);
 		DeleteGO(this);*/
