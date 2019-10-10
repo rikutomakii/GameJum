@@ -38,6 +38,9 @@ void Game::Update()
 	startFlag = GameTime().GetFrameDeltaTime();
 	count++;
 	 r = rand() % 144;
+	 if (r == 0) {
+		 r = 1;
+	 }
 	if (startFlag >= 0.2 &&
 		count >=144) {
 		NewGO<Enemy>(0);

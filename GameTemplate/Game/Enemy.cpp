@@ -87,7 +87,21 @@ void Enemy::Shoumetsu()
 			m_CSoundSource->Init(L"sound/coinGet.wav");
 			
 	}
+
+	//‘¬‚­‚½‚½‚«‚·‚¬‚½
+
+	if (Pad(0).IsTrigger(enButtonA) &&
+		enemyPos.z > 10.0f&&
+		enemyPos.z < 20.0f) {
+		DeleteGO(this);
+
+		font->SetText(L"false");//false‚¾‚ºB
+		DeleteGO(font);
+		DeleteGO(this);
+	}
 }
+
+
 
 void Enemy::enemyTelepo()
 {
