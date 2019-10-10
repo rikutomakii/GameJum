@@ -26,5 +26,10 @@ bool result::Start()
 
 void result::Update()
 {
-
+	if (Pad(0).IsPress(enButtonY)) {
+		//GameSceneのインスタンスを生成
+		NewGO<result>(0, "result");
+		//シーンが切り替わるのでTitlsSceneのインスタンスを削除
+		DeleteGO(this);
+	}
 }
