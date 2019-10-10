@@ -46,7 +46,7 @@ void Enemy::Shoumetsu()
 	scale.y = 5.0f;
 	scale.z = 5.0f;
 	CVector3 emitPos = enemyPos;
-
+	effect->SetPosition(effectPos);//セットポジション
 
 	effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
 
@@ -86,10 +86,10 @@ void Enemy::Shoumetsu()
 			
 			
 			
-			effectPos = enemyPos;
-			effect2->SetPosition(effectPos);//セットポジション
-			effect2->SetScale(scale);//セットスケール
-			effect2->Play(L"effect/blood.efk");//ポイの見つけて張り付ける
+
+
+			
+			effect->Play(L"effect/blood.efk");//ポイの見つけて張り付ける
 			
 			//text.x = enemyPos.x;
 			//text.y = enemyPos.z-100;
@@ -105,14 +105,14 @@ void Enemy::Shoumetsu()
 
 	//速くたたきすぎた時
 
-	if (Pad(0).IsTrigger(enButtonA) &&
-		enemyPos.z > 30.0f&&
-		enemyPos.z < 1000.0f) {
-		DeleteGO(this);
+	//if (Pad(0).IsTrigger(enButtonA) &&
+	//	enemyPos.z > -30000.0f&&
+	//	enemyPos.z < -30.0f) {
+	//	DeleteGO(this);
 
 
-		//font->SetText(L"false");//falseだぜ。
-		/*DeleteGO(font);
-		DeleteGO(this);*/
-	}
+	//	//font->SetText(L"false");//falseだぜ。
+	//	/*DeleteGO(font);
+	//	DeleteGO(this);*/
+	//}
 }
