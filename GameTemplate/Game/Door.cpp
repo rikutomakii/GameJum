@@ -43,7 +43,7 @@ void Door::Update()
 {
 	
 
-	Game* gm = FindGO<Game>("Game");
+	/*Game* gm = FindGO<Game>("Game");*/
 	m_timer++;
 	if (Pad(0).IsPressAnyKey()/*&&gm->StartFlag == true*/) {
 		
