@@ -13,6 +13,7 @@ Enemy::~Enemy()
 
 bool Enemy::Start()
 {
+	//enemyPatarn = rand() %  1;
 	m_SkinModelRender = NewGO<prefab::CSkinModelRender>(0);//スキンモデルレンダー
 	m_SkinModelRender->Init(L"modelData/Enemy.cmo");//後で帰るモデルデータ
 	font = NewGO<prefab::CFontRender>(0);//文字出すやつ
@@ -33,8 +34,8 @@ void Enemy::Update()
 void Enemy::enemyMove()
 {
 	enemyPos.z += 2;
-	m_SkinModelRender->SetPosition(enemyPos);
 	
+	m_SkinModelRender->SetPosition(enemyPos);
 
 }
 
@@ -56,12 +57,12 @@ void Enemy::Shoumetsu()
 
 		effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
 		
-		font->SetPosition(text);
-		font->SetText(L"Great");//Greatだぜ。これをenemyの場所でやりたい
-		DeleteGO(font);
+		//font->SetPosition(text);
+		//font->SetText(L"Great");//Greatだぜ。これをenemyの場所でやりたい
+		//DeleteGO(font);
 
-		DeleteGO(this);
-		
+		//DeleteGO(this);
+		//
 
 
 	}
@@ -76,22 +77,32 @@ void Enemy::Shoumetsu()
 			effect->SetPosition(effectPos);
 			effect->Play(L"effect/kieru.efk");//ポイの見つけて張り付ける
 			
-			text.x = enemyPos.x;
-			text.y = enemyPos.z-100;
-			font->SetPosition(text);
-			font->SetText(L"false");//falseだぜ。
-			DeleteGO(font);
-			DeleteGO(this);
+			//text.x = enemyPos.x;
+			//text.y = enemyPos.z-100;
+			//font->SetPosition(text);
+			//font->SetText(L"false");//falseだぜ。
+			//DeleteGO(font);
+			//DeleteGO(this);
 			
 			//死亡音,後で追加する
 			m_CSoundSource->Init(L"sound/coinGet.wav");
 			
 	}
+
+	//速くたたきすぎた時
+
+	if (Pad(0).IsTrigger(enButtonA) &&
+		enemyPos.z > 10.0f&&
+		enemyPos.z < 20.0f) {
+		DeleteGO(this);
+
+		font->SetText(L"false");//falseだぜ。
+		DeleteGO(font);
+		DeleteGO(this);
+	}
 }
 
-void Enemy::enemyTelepo()
+void Enemy::boostEnemy()
 {
-	//テレポさせるだけ
-	CVector3 enemyTerepo = CVector3::Zero;
-	
+	enemyPos.z--;
 }

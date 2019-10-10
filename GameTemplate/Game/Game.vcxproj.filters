@@ -26,7 +26,7 @@
     <ClCompile Include="Titlescene.cpp" />
     <ClCompile Include="Door.cpp" />
     <ClCompile Include="BackGround.cpp" />
-    <ClCompile Include="Geezi.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -38,7 +38,7 @@
     <ClInclude Include="Titlescene.h" />
     <ClInclude Include="Door.h" />
     <ClInclude Include="BackGround.h" />
-    <ClInclude Include="Geezi.h" />
+    <ClInclude Include="Enemy2.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
