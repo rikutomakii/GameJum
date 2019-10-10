@@ -40,7 +40,8 @@ count++;
 	}
 }
 void Game::PostRender(CRenderContext& rc)
-{if (StartFlag == true) {
+{
+	if (StartFlag == true) {
 		m_timer = max(0.0f, m_timer - GameTime().GetFrameDeltaTime());
 	}
 	

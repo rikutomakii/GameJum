@@ -1808,6 +1808,7 @@
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
+    <MeshContentTask Include="Assets\modelData\sirusi.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>
@@ -1828,6 +1829,9 @@
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\geezi1.png" />
     <ImageContentTask Include="Assets\sprite\geezi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\GameOver.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
