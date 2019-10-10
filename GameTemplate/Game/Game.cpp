@@ -5,7 +5,7 @@
 
 Game::Game()
 {
-	m_backG = NewGO<BackGround>(0, "backG");
+	//m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
 }
@@ -36,4 +36,26 @@ count++;
 		startFlag = 0;
 		count = 0;
 	}
+}
+
+void Game::PostRender(CRenderContext& rc)
+{
+	if (StartFlag == true) {
+		m_timer = max(0.0f, m_timer - GameTime().GetFrameDeltaTime());
+	}
+	
+	wchar_t text[256];
+	int minute = (int)m_timer / 60;
+	int sec = (int)m_timer % 60;
+	swprintf_s(text, L"%02d:%02d", minute, sec);
+	m_fontTest.Begin(rc);
+	m_fontTest.Draw(
+		text,
+		{ -140.0f, 340.0f },
+		{ 1.0f, 0.0f, 1.0f, 1.0f },
+		0.0f,
+		1.5f,
+		{ 0.0f, 1.0f }
+	);
+	m_fontTest.End(rc);
 }
