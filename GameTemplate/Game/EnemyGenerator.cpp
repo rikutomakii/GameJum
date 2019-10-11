@@ -5,8 +5,8 @@
 #include "Game.h"
 EnemyGenerator::~EnemyGenerator()
 {
-	Enemy* enemy;
-	DeleteGO(enemy->m_SkinModelRender);
+	Enemy enemy;
+	DeleteGO(enemy.m_SkinModelRender);
 }
 
 
