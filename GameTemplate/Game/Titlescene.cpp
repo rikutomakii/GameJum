@@ -12,7 +12,7 @@ Titlescene::~Titlescene()
 {
 
 	DeleteGO(m_spriteRender);
-	DeleteGO(m_bgmSoundSource);
+	//DeleteGO(m_bgmSoundSource);
 	DeleteGO(m_cfontrender);
 }
 

@@ -24,7 +24,6 @@ bool result::Start()
 		1280.0f,					//スプライトの幅。
 		720.0f						//スプライトの高さ。
 	);
-	m_spriteRender->SetActiveFlag(false);
 	
 
 
@@ -35,9 +34,6 @@ bool result::Start()
 
 void result::Update()
 {
-	Game* gm = FindGO<Game>("Game");
 	
-	if (gm->m_timer == 0) {
-		m_spriteRender->SetActiveFlag(true);
-	}
+	
 }

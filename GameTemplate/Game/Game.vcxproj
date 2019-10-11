@@ -1768,6 +1768,7 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="Geezi.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="result.cpp" />
@@ -1800,6 +1801,7 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameClear.h" />
     <ClInclude Include="Geezi.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="result.h" />
@@ -1809,6 +1811,7 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
+    <MeshContentTask Include="Assets\modelData\Enemy2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
     <MeshContentTask Include="Assets\modelData\sirusi.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
