@@ -19,7 +19,7 @@ bool Enemy::Start()
 {
 	//enemyPatarn = rand() %  1;
 	m_SkinModelRender = NewGO<prefab::CSkinModelRender>(0);//スキンモデルレンダー
-	m_SkinModelRender->Init(L"modelData/Enemy2.cmo");//後で帰るモデルデータ
+	m_SkinModelRender->Init(L"modelData/Enemy2.cmo");
 	m_SkinModelRender->SetScale({ 3.0f,3.0f,3.0f });
 	//m_SkinModelRender->SetPosition({ -10.0f,-10.0f,0.0f });
 

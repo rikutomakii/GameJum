@@ -44,6 +44,7 @@ public:
 	int count2 = 0;
 
 
+
 	bool StartFlag = false;
 	bool OwariFlag = false;
 	bool ClearFlag = false;

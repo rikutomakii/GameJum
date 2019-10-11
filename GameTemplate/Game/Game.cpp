@@ -5,13 +5,14 @@
 #include "tkEngine/light/tkDirectionLight.h"
 #include "result.h"
 #include "Titlescene.h"
-#include "EnemyGenerator.h"
+#include "BackGround.h"
+//#include "EnemyGenerator.h"
 Game::Game()
 {
-//m_backG = NewGO<BackGround>(0, "backG");
+	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
-	m_eyG = NewGO<EnemyGenerator>(0, "enemyG");	//m_ey = NewGO<Enemy>(0, "enemy");
+	//m_eyG = NewGO<EnemyGenerator>(0, "enemyG");	//m_ey = NewGO<Enemy>(0, "enemy");
 	//m_rs = NewGO<result>(0, "result");
 	
 	//m_ey2 = NewGO<Enemy2>(0, "enemy2");
@@ -32,10 +33,10 @@ Game::~Game()
 bool Game::Start()
 {
 
-	m_backG = NewGO<BackGround>(0, "backG");
+	//m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
-	m_eyG = NewGO<EnemyGenerator>(0, "enemyG");
+	//m_eyG = NewGO<EnemyGenerator>(0, "enemyG");
 
 	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
 	MainCamera().SetPosition({ -80.0f, 150.0f, 150.0f });
@@ -55,11 +56,20 @@ void Game::Update()
 		シーンが切り替わるのでTitlsSceneのインスタンスを削除
 		DeleteGO(this);
 	}*/
+	
+	
+	
+	if (count2 == 10) {
+		DeleteGO(m_ey->m_SkinModelRender);
+		DeleteGO(m_ey->m_SkinModelRender);
+		DeleteGO(this);
+	}
+
 	if (Pad(0).IsPress(enButtonB)&&ClearFlag == true) {
 		NewGO<Titlescene>(0, "title");
 		DeleteGO(this);
 	}
-	m_eyG->enemyGenerator();
+	
 
 	//条件を満たしたときタイトルシーン
 	if (count2 == 10 && m_gc == nullptr)
@@ -87,17 +97,21 @@ void Game::Update()
 	MainCamera().Update();
 
 
+	//エネミーの表示処理
+	count++;
+	startFlag++;//にゃーん(´・ω・｀)q
+	if (startFlag > 70 &&
+		count >= r) {
 
-	//count++;
-	//startFlag++;
-	//if (startFlag > 70 &&
-	//	count >= r
-	//	/*&& OwariFlag == false*/) {
-	//	startFlag = 0;
-	//	m_ey = NewGO<Enemy>(0, "enemy");
-	//	r = rand() % 200;
-	//	count = 0;
-	//}
+		NewGO<Enemy>(0,"enemy");
+
+		if (startFlag % 2 == 0) {
+			NewGO<Enemy2>(0,"enemy2");
+		}
+		startFlag = 0;
+		r = rand() % 400;
+		count = 0;
+	}
 }
 
 void Game::PostRender(CRenderContext& rc)
