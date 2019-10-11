@@ -24,4 +24,5 @@ void EnemyGenerator::Update()
 		r = rand() % 200;
 		count = 0;
 	}
+
 }
