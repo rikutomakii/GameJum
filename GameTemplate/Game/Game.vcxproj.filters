@@ -36,6 +36,7 @@
     <MeshContentTask Include="Assets\modelData\sirusi.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
     <MeshContentTask Include="Assets\modelData\haikei.FBX" />
+    <MeshContentTask Include="Assets\modelData\bomEnemy.FBX" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BackGround.h" />

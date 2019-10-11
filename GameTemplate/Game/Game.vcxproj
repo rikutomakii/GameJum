@@ -1812,6 +1812,7 @@
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
+    <MeshContentTask Include="Assets\modelData\bomEnemy.FBX" />
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
     <MeshContentTask Include="Assets\modelData\Enemy2.FBX" />
     <MeshContentTask Include="Assets\modelData\haikei.FBX" />

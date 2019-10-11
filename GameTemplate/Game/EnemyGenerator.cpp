@@ -7,29 +7,35 @@ EnemyGenerator::~EnemyGenerator()
 {
 	Enemy enemy;
 	DeleteGO(enemy.m_SkinModelRender);
+
 }
 
 
 
 void EnemyGenerator::enemyGenerator()
 {
+	Enemy2 enemy2;//////////‚É‚á‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ñ(LEƒÖEM)
+	Game game ;///////////////////‚É‚á[‚ñ(LEƒÖEM)
+	Enemy enemy;//‚É‚á[‚ñ(LEƒÖEM)
+
 	count++;
-	startFlag++;
+	startFlag++;//‚É‚á[‚ñ(LEƒÖEM)q
 	if (startFlag > 70 &&
 		count >= r) {
 
-		Enemy* enemy = NewGO<Enemy>(0);
+		NewGO<Enemy>(0);
 
 		if (startFlag % 2 == 0) {
-			Enemy2* enemy2 = NewGO<Enemy2>(0);
+			 NewGO<Enemy2>(0);
 		}
 		startFlag = 0;
 		r = rand() % 400;
 		count = 0;
 	}
-	Game* game;
-	if (game->count2 == 10) {
+	
+	if (game.count2 == 10) {
+		DeleteGO(enemy.m_SkinModelRender);
+		DeleteGO(enemy2.m_SkinModelRender);
 		DeleteGO(this);
 	}
-
 }
