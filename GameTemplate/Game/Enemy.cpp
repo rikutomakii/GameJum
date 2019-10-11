@@ -72,16 +72,16 @@ void Enemy::Shoumetsu()
 		){
 		DeleteGO(this);//エネミースキンの破棄
 		
-		HogeFlag = true;
-
 		
+
+		if (HogeFlag == true) {
 			Geezi* g = FindGO<Geezi>("geezi");
 			Game* gm = FindGO<Game>("Game");
 
 			//m_point += 1;
 			g->scale.y += 0.9;
 			gm->count2 += 1;
-			
+		}
 
 
 		//エフェクトを再生

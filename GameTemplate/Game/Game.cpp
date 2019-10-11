@@ -10,6 +10,7 @@ Game::Game()
 	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
+	//m_ey = NewGO<Enemy>(0, "enemy");
 	//m_rs = NewGO<result>(0, "result");
 	
 	//m_ey2 = NewGO<Enemy2>(0, "enemy2");
@@ -47,6 +48,8 @@ void Game::Update()
 		DeleteGO(this);
 	}*/
 
+	
+
 	if (count2 == 10)
 	{
 		DeleteGO(this);
@@ -58,7 +61,7 @@ void Game::Update()
 
 	if (m_timer == 0 /*&& OwariFlag == false*/) {
 		DeleteGO(this);
-		//m_rs = NewGO<result>(0, "result");
+		m_rs = NewGO<result>(0, "result");
 		
 		OwariFlag = true;
 		NewGO<Titlescene>(0, "title");
@@ -69,6 +72,7 @@ void Game::Update()
 	}
 
 	MainCamera().Update();
+
 	count++;
 	startFlag++;
 	if (startFlag > 70 &&
@@ -99,5 +103,16 @@ void Game::PostRender(CRenderContext& rc)
 		1.5f,
 		{ 0.0f, 1.0f }
 	);
+
+	swprintf_s(text, L"%02d/30", count2);
+	m_fontTest.Draw(
+		text,
+		{ 450.0f ,350.0f },
+		{ 1.0f,.0f,0.0f,1.0f },
+		0.0f,
+		m_posintFontScale,
+		{ 0.0f,1.0f }
+	);
+
 	m_fontTest.End(rc);
 }
