@@ -16,7 +16,7 @@ bool Enemy2::Start()
 {
 	//enemyPatarn = rand() %  1;
 	m_SkinModelRender = NewGO<prefab::CSkinModelRender>(0);//スキンモデルレンダー
-	m_SkinModelRender->Init(L"modelData/bomEnemy.cmo");//後で帰るモデルデータ
+	m_SkinModelRender->Init(L"modelData/bomEnemy.cmo");//後で帰るモデルデータ.変えた。」
 	//font = NewGO<prefab::CFontRender>(0);//文字出すやつ
 	//m_CSoundSource = NewGO<prefab::CSoundSource>(0);//音出すやつ
 	effect = NewGO<prefab::CEffect>(0);//こっからエフェクト 14:27先輩に殴られる
@@ -61,5 +61,3 @@ void Enemy2::enemyShoumetsu()
 
 	}
 }
-
-

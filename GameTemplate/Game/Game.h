@@ -3,13 +3,10 @@
 #include "tkEngine/graphics/effect/tkEffect.h"
 #include "tkEngine/physics/tkPhysicsGhostObject.h"
 #include "tkEngine/character/tkCharacterController.h"
-#include "BackGround.h"
-#include "Door.h"
-#include "Enemy.h"
 #include "Geezi.h"
-#include "result.h"
 #include"GameClear.h"
-#include "Enemy2.h"
+
+class EnemyGenerator;
 
 class Enemy2;
 class result;
@@ -35,17 +32,21 @@ public:
 	GameClear* m_gc = nullptr;
 	Enemy* m_ey = nullptr;
 	Enemy2* m_ey2 = nullptr;
+	EnemyGenerator* m_eyG = nullptr;
 
-	int r = rand() % 200;
+
+	int r = rand() % 100;
 	int startFlag = 0;
 	int count = 0;
 	CFont m_fontTest;	
 	float m_posintFontScale = 1.5f;
-	float m_timer = 10.0f;
+	float m_timer = 60.0f;
 	int count2 = 0;
+
 
 
 	bool StartFlag = false;
 	bool OwariFlag = false;
+	bool ClearFlag = false;
 };
 

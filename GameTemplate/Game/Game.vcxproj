@@ -1812,6 +1812,7 @@
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
+    <MeshContentTask Include="Assets\modelData\bomEnemy.FBX" />
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
     <MeshContentTask Include="Assets\modelData\Enemy2.FBX" />
     <MeshContentTask Include="Assets\modelData\haikei.FBX" />
@@ -1830,6 +1831,7 @@
     <Media Include="Assets\sound\mens-yeah1.wav" />
     <Media Include="Assets\sound\tin1.wav" />
     <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav" />
+    <Media Include="Assets\sound\握りつぶす・踏みつける音 (online-audio-converter.com).wav" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\gameClear.png" />

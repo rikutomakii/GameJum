@@ -2,6 +2,7 @@
 #include "Door.h"
 #include "Titlescene.h"
 
+#include "tkEngine/light/tkDirectionLight.h"
 Door::Door()
 {
 	
@@ -12,6 +13,7 @@ Door::~Door()
 	DeleteGO(m_skinModelRender);
 	DeleteGO(m_skinModelRender2);
 	DeleteGO(m_skinModelRender3);
+	DeleteGO(m_directionLig);
 	//DeleteGO(ss);
 }
 
@@ -37,8 +39,9 @@ bool Door::Start()
 	m_skinModelRender2->SetPosition({ -70.0f,0.0f,0.0f });
 	m_skinModelRender3->SetPosition({ 0.0f,-20.0f,10.0f });
 	
+	m_directionLig = NewGO<prefab::CDirectionLight>(0);
 	
-
+	m_directionLig->SetColor({ 2.5f, 2.5f, 2.5f, 1.0f });
 	
 	return true;
 }
@@ -55,6 +58,7 @@ void Door::Update()
 		m_position2.x = -16.0f;
 		m_skinModelRender->SetPosition(m_position);
 		m_skinModelRender2->SetPosition(m_position2);
+		DownFlag = true;
 		if (m_timer >= 300) {
 			ss = NewGO<prefab::CSoundSource>(0);
 
@@ -76,7 +80,7 @@ void Door::Update()
 		
 		if (m_position.x == 70) {
 			DoorFlag = false;
-			
+			DownFlag = false;
 			
 		}
 	}

@@ -5,12 +5,14 @@
 #include "tkEngine/light/tkDirectionLight.h"
 #include "result.h"
 #include "Titlescene.h"
+#include "BackGround.h"
+//#include "EnemyGenerator.h"
 Game::Game()
 {
-	m_backG = NewGO<BackGround>(0, "backG");
-	m_door = NewGO<Door>(0, "door");
-	m_geezi = NewGO<Geezi>(0, "geezi");
-	//m_ey = NewGO<Enemy>(0, "enemy");
+	
+	//m_door = NewGO<Door>(0, "door");
+	//m_geezi = NewGO<Geezi>(0, "geezi");
+	//m_eyG = NewGO<EnemyGenerator>(0, "enemyG");	//m_ey = NewGO<Enemy>(0, "enemy");
 	//m_rs = NewGO<result>(0, "result");
 	
 	//m_ey2 = NewGO<Enemy2>(0, "enemy2");
@@ -23,12 +25,20 @@ Game::~Game()
 	DeleteGO(m_backG);
 	DeleteGO(m_door);
 	DeleteGO(m_geezi);
-	//DeleteGO(m_rs);
-	DeleteGO(m_ey);
+	DeleteGO(m_rs);
+	DeleteGOs("enemy");
 	//DeleteGO(m_ey2);
 	
 }
-bool Game::Start(){
+bool Game::Start()
+{
+	m_backG = NewGO<BackGround>(0, "backG");
+	//m_backG = NewGO<BackGround>(0, "backG");
+	m_door = NewGO<Door>(0, "door");
+	m_geezi = NewGO<Geezi>(0, "geezi");
+	//m_eyG = NewGO<EnemyGenerator>(0, "enemyG");
+	//NewGO<Enemy2>(0, "enemy2");
+
 	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
 	MainCamera().SetPosition({ -80.0f, 150.0f, 150.0f });
 
@@ -47,39 +57,60 @@ void Game::Update()
 		シーンが切り替わるのでTitlsSceneのインスタンスを削除
 		DeleteGO(this);
 	}*/
+	
+	
+	
+	if (count2 == 30) {
+		DeleteGO(m_ey->m_SkinModelRender);
+		DeleteGO(m_ey->m_SkinModelRender);
+		DeleteGO(this);
+	}
 
+	if (Pad(0).IsPress(enButtonB)&&ClearFlag == true) {
+		NewGO<Titlescene>(0, "title");
+		DeleteGO(this);
+	}
 	
 
-	if (count2 == 10)
+	//条件を満たしたときタイトルシーン
+	if (count2 == 30 && m_gc == nullptr)
 	{
-		DeleteGO(this);
+		ClearFlag = true;
 		m_gc = NewGO<GameClear>(0,"gameC");
-		if (Pad(0).IsPress(enButtonB)) {
-			NewGO<Titlescene>(0, "title");
-		}
-	}
-
-	if (m_timer == 0 /*&& OwariFlag == false*/) {
-		DeleteGO(this);
-		m_rs = NewGO<result>(0, "result");
+		count2 = 11;
 		
-		OwariFlag = true;
+	}
+	//Bボタンを押したときにタイトルに戻る
+	if (Pad(0).IsTrigger(enButtonB) && OwariFlag == true) {
 		NewGO<Titlescene>(0, "title");
+		DeleteGO(this);
+	}
+	//タイマーがゼロになったとき、リザルトNewGO
+	if (m_timer == 0 &&m_rs ==nullptr) {
+		OwariFlag = true;
+		//DeleteGO(this);
+		m_rs = NewGO<result>(0, "result");
+		m_timer = -1;
 		
 	}
-	if (Pad(0).IsPress(enButtonB)&&OwariFlag==true) {
-		
-	}
+	
 
 	MainCamera().Update();
 
+
+	//エネミーの表示処理
 	count++;
-	startFlag++;
+	startFlag++;//にゃーん(´・ω・｀)q
 	if (startFlag > 70 &&
 		count >= r) {
+
+		NewGO<Enemy>(0,"enemy");
+
+		if (startFlag % 2 == 0) {
+			NewGO<Enemy2>(0,"enemy2");
+		}
 		startFlag = 0;
-		m_ey = NewGO<Enemy>(0, "enemy");
-		r = rand() % 200;
+		r = rand() % 100;
 		count = 0;
 	}
 }

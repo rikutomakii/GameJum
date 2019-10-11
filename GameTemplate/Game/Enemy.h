@@ -1,6 +1,7 @@
 #pragma once
 #include "Geezi.h"
 #include "Game.h"
+#include "Door.h"
 class Effect;
 class Game;
 class Enemy:public IGameObject
@@ -17,6 +18,7 @@ public:
 	void Shoumetsu();//消えるときのヤツ
 	void enemyMove();//エネミーが動くやつ
 	prefab::CSoundSource* m_CSoundSource = nullptr;
+	prefab::CSoundSource* ss = nullptr;
 	Effect* ef;
 	
 	prefab::CEffect* effect2 = NewGO<prefab::CEffect>(0);
