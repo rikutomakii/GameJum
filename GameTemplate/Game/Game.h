@@ -40,7 +40,7 @@ public:
 	int count = 0;
 	CFont m_fontTest;	
 	float m_posintFontScale = 1.5f;
-	float m_timer = 10.0f;
+	float m_timer = 60.0f;
 	int count2 = 0;
 
 

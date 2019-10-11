@@ -60,7 +60,7 @@ void Game::Update()
 	
 	
 	
-	if (count2 == 10) {
+	if (count2 == 30) {
 		DeleteGO(m_ey->m_SkinModelRender);
 		DeleteGO(m_ey->m_SkinModelRender);
 		DeleteGO(this);
@@ -73,7 +73,7 @@ void Game::Update()
 	
 
 	//条件を満たしたときタイトルシーン
-	if (count2 == 10 && m_gc == nullptr)
+	if (count2 == 30 && m_gc == nullptr)
 	{
 		ClearFlag = true;
 		m_gc = NewGO<GameClear>(0,"gameC");
