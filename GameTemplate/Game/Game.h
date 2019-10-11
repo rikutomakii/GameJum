@@ -7,9 +7,17 @@
 #include "Door.h"
 #include "Enemy.h"
 #include "Geezi.h"
+#include "result.h"
+#include"GameClear.h"
+#include "Enemy2.h"
+
+class Enemy2;
+class result;
+class GameClear;
 class Enemy;
 class Door;
 class BackGround;
+class result;
 class Game : public IGameObject
 {
 public:
@@ -23,13 +31,21 @@ public:
 	BackGround* m_backG = nullptr;
 	Door* m_door = nullptr;
 	Geezi* m_geezi = nullptr;
+	result* m_rs = nullptr;
+	GameClear* m_gc = nullptr;
+	Enemy* m_ey = nullptr;
+	Enemy2* m_ey2 = nullptr;
 
-	int r = rand()%200;
-	CFont m_fontTest;	
+	int r = rand() % 200;
 	int startFlag = 0;
 	int count = 0;
-	float m_timer = 91.0f;
+	CFont m_fontTest;	
+	
+	float m_timer = 10.0f;
+	int count2 = 0;
+
 
 	bool StartFlag = false;
+	bool OwariFlag = false;
 };
 

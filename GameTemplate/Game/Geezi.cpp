@@ -3,12 +3,13 @@
 
 Geezi::Geezi()
 {
-	DeleteGO(m_spriteRender);
-	DeleteGO(m_spriteRender2);
-}
 
+}
 Geezi::~Geezi()
 {
+	DeleteGO(m_spriteRender);
+	DeleteGO(m_spriteRender2);
+
 }
 
 bool Geezi::Start()
@@ -28,4 +29,5 @@ bool Geezi::Start()
 
 void Geezi::Update()
 {
+	m_spriteRender2->SetScale(scale);
 }

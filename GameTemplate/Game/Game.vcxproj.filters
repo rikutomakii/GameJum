@@ -29,7 +29,10 @@
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Geezi.cpp" />
     <ClCompile Include="result.cpp" />
-  </ItemGroup>
+    <ClCompile Include="Effect.cpp" />
+<ClCompile Include="GameClear.cpp" />
+<ClCompile Include="Enemy2Generator.cpp" />
+<ClCompile Include="EnemyGenerator.cpp" />  </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
       <Filter>Resource Files</Filter>
@@ -43,6 +46,14 @@
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Geezi.h" />
     <ClInclude Include="result.h" />
+    <ClInclude Include="Effect.h" />
+<<<<<<< .mine
+    <ClInclude Include="Enemy2Generator.h" />
+    <ClInclude Include="EnemyGenerator.h" />
+=======
+    <ClInclude Include="GameClear.h" />
+
+>>>>>>> .theirs
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -60,7 +71,9 @@
     <MeshContentTask Include="Assets\modelData\sirusi.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
+    <MeshContentTask Include="Assets\modelData\Enemy2.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
@@ -79,6 +92,7 @@
     <ImageContentTask Include="Assets\sprite\GameOver.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\famima.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\tin1.wav">
@@ -98,12 +112,5 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{a7b51687-d3ac-488f-a5ae-517dbbf3bf1e}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\sprite\famima ao.png" />
-    <Image Include="Assets\sprite\famima ao tobira waku.png" />
-    <Image Include="Assets\sprite\famima ao tobira.png" />
-    <Image Include="Assets\sprite\famima ao tobira hidari.png" />
-    <Image Include="Assets\sprite\famima ao tobira migi.png" />
   </ItemGroup>
 </Project>

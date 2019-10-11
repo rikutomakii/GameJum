@@ -9,6 +9,10 @@ Door::Door()
 
 Door::~Door()
 {
+	DeleteGO(m_skinModelRender);
+	DeleteGO(m_skinModelRender2);
+	DeleteGO(m_skinModelRender3);
+	//DeleteGO(ss);
 }
 
 bool Door::Start()
@@ -43,7 +47,7 @@ void Door::Update()
 {
 	
 
-	//Game* gm = FindGO<Game>("Game");
+	/*Game* gm = FindGO<Game>("Game");*/
 	m_timer++;
 	if (Pad(0).IsPressAnyKey()/*&&gm->StartFlag == true*/) {
 		

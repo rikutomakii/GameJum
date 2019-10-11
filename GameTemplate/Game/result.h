@@ -1,5 +1,6 @@
 #pragma once
-
+#include "Game.h"
+class Game;
 class result:public IGameObject
 {
 public:
@@ -11,5 +12,6 @@ public:
 	void Update();
 
 	prefab::CSpriteRender* m_spriteRender = nullptr;
+
 
 };

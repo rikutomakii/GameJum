@@ -1764,9 +1764,13 @@
   <ItemGroup>
     <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Effect.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Enemy2.cpp" />
+    <ClCompile Include="Enemy2Generator.cpp" />
+    <ClCompile Include="EnemyGenerator.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="Geezi.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="result.cpp" />
@@ -1795,9 +1799,13 @@
   <ItemGroup>
     <ClInclude Include="BackGround.h" />
     <ClInclude Include="Door.h" />
+    <ClInclude Include="Effect.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Enemy2.h" />
+    <ClInclude Include="Enemy2Generator.h" />
+    <ClInclude Include="EnemyGenerator.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameClear.h" />
     <ClInclude Include="Geezi.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="result.h" />
@@ -1807,7 +1815,7 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
-    <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
+    <MeshContentTask Include="Assets\modelData\Enemy2.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
     <MeshContentTask Include="Assets\modelData\sirusi.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
@@ -1835,15 +1843,7 @@
     <ImageContentTask Include="Assets\sprite\GameOver.png" />
   </ItemGroup>
   <ItemGroup>
-    <ImageContentTask Include="Assets\sprite\famima ao.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ImageContentTask Include="Assets\sprite\famima ao tobira waku.png" />
-    <ImageContentTask Include="Assets\sprite\famima ao tobira.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ImageContentTask Include="Assets\sprite\famima ao tobira hidari.png" />
-    <ImageContentTask Include="Assets\sprite\famima ao tobira migi.png" />
+    <ImageContentTask Include="Assets\sprite\famima.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
