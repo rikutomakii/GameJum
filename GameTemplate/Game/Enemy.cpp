@@ -67,8 +67,8 @@ void Enemy::Shoumetsu()
 
 	effect->SetScale(scale);
 	//タイミングよく消せたとき
-	/*Geezi* g = FindGO<Geezi>("geezi");
-	Game* gm = FindGO<Game>("Game");*/
+	Geezi* g = FindGO<Geezi>("geezi");
+	Game* gm = FindGO<Game>("Game");
 
 	if (Pad(0).IsTrigger(enButtonA)&&
 		enemyPos.z >=-50.0&&
@@ -76,8 +76,8 @@ void Enemy::Shoumetsu()
 		){
 		DeleteGO(this);//エネミースキンの破棄
 		
-	/*	g->scale.y += 0.9;
-		gm->count2 += 1;*/
+		g->scale.y += 0.9;
+		gm->count2 += 1;
 		
 
 		

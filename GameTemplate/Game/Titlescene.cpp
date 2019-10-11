@@ -69,7 +69,7 @@ void Titlescene::Update()
 	
 
 	//もしもAボタンが押されたら
-	if (Pad(0).IsPressAnyKey()) {
+	if (Pad(0).IsPress(enButtonA)) {
 
 		//ドアが開いているかの判定
 		IsOpendoor = true;

@@ -10,6 +10,7 @@ Game::Game()
 	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
+	m_eyG = NewGO<EnemyGenerator>(0, "enemyG");
 	//m_ey = NewGO<Enemy>(0, "enemy");
 	//m_rs = NewGO<result>(0, "result");
 	
@@ -23,8 +24,8 @@ Game::~Game()
 	DeleteGO(m_backG);
 	DeleteGO(m_door);
 	DeleteGO(m_geezi);
-	//DeleteGO(m_rs);
-	DeleteGO(m_ey);
+	DeleteGO(m_rs);
+	DeleteGOs("enemy");
 	//DeleteGO(m_ey2);
 	
 }
@@ -50,39 +51,42 @@ void Game::Update()
 
 	
 
-	if (count2 == 10)
+	if (count2 == 10 && m_gc == nullptr)
 	{
-		DeleteGO(this);
 		m_gc = NewGO<GameClear>(0,"gameC");
 		if (Pad(0).IsPress(enButtonB)) {
 			NewGO<Titlescene>(0, "title");
+			DeleteGO(this);
 		}
 	}
 
-	if (m_timer == 0 ) {
-		DeleteGO(this);
-	//	m_rs = NewGO<result>(0, "result");
-		OwariFlag = true;
-		
-	}
-	if (Pad(0).IsPressAnyKey() && OwariFlag == true) {
-		
+	if (Pad(0).IsTrigger(enButtonB) && OwariFlag == true) {
+
 		NewGO<Titlescene>(0, "title");
 		DeleteGO(this);
 	}
 
+	if (m_timer == 0 &&m_rs ==nullptr) {
+		OwariFlag = true;
+		//DeleteGO(this);
+		m_rs = NewGO<result>(0, "result");
+		m_timer = -1;
+		
+	}
+	
+
 	MainCamera().Update();
 
-	count++;
-	startFlag++;
-	if (startFlag > 70 &&
-		count >= r
-		/*&& OwariFlag == false*/) {
-		startFlag = 0;
-		m_ey = NewGO<Enemy>(0, "enemy");
-		r = rand() % 200;
-		count = 0;
-	}
+	//count++;
+	//startFlag++;
+	//if (startFlag > 70 &&
+	//	count >= r
+	//	/*&& OwariFlag == false*/) {
+	//	startFlag = 0;
+	//	m_ey = NewGO<Enemy>(0, "enemy");
+	//	r = rand() % 200;
+	//	count = 0;
+	//}
 }
 
 void Game::PostRender(CRenderContext& rc)
