@@ -110,7 +110,7 @@ void Game::Update()
 			NewGO<Enemy2>(0,"enemy2");
 		}
 		startFlag = 0;
-		r = rand() % 400;
+		r = rand() % 100;
 		count = 0;
 	}
 }

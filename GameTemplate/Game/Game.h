@@ -35,7 +35,7 @@ public:
 	EnemyGenerator* m_eyG = nullptr;
 
 
-	int r = rand() % 200;
+	int r = rand() % 100;
 	int startFlag = 0;
 	int count = 0;
 	CFont m_fontTest;	
