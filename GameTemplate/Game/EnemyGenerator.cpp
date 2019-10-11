@@ -7,6 +7,8 @@ EnemyGenerator::~EnemyGenerator()
 
 bool EnemyGenerator::Start()
 {
+
+	NewGO<Enemy>(0);
 	return true;
 }
 
@@ -22,4 +24,5 @@ void EnemyGenerator::Update()
 		r = rand() % 200;
 		count = 0;
 	}
+
 }

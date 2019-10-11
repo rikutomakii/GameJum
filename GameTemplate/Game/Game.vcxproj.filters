@@ -8,6 +8,11 @@
     <ImageContentTask Include="Assets\sprite\geezi2.png" />
     <ImageContentTask Include="Assets\sprite\GameOver.png" />
     <ImageContentTask Include="Assets\sprite\famima.png" />
+    <ImageContentTask Include="Assets\sprite\famima ao tobira hidari.png" />
+    <ImageContentTask Include="Assets\sprite\famima ao tobira migi.png" />
+    <ImageContentTask Include="Assets\sprite\famima ao tobira waku.png" />
+    <ImageContentTask Include="Assets\sprite\famima ao tobira.png" />
+    <ImageContentTask Include="Assets\sprite\famima ao.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BackGround.cpp" />
@@ -15,7 +20,6 @@
     <ClCompile Include="Effect.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Enemy2.cpp" />
-    <ClCompile Include="Enemy2Generator.cpp" />
     <ClCompile Include="EnemyGenerator.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameClear.cpp" />
@@ -39,7 +43,6 @@
     <ClInclude Include="Effect.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Enemy2.h" />
-    <ClInclude Include="Enemy2Generator.h" />
     <ClInclude Include="EnemyGenerator.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameClear.h" />
