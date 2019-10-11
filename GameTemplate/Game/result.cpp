@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "result.h"
-
+#include "Titlescene.h"
 
 result::result()
 {
@@ -34,6 +34,7 @@ bool result::Start()
 
 void result::Update()
 {
+
 	
+	}
 	
-}

@@ -25,7 +25,7 @@ bool Titlescene::Start()
 	R_spriteRender = NewGO<prefab::CSpriteRender>(0);
 	L_spriteRender = NewGO<prefab::CSpriteRender>(0);
 	//タイトル画面をロード
-	m_spriteRender->Init(L"sprite/famima ao tobira waku.dds", 1000.0f, 720.0f);
+	m_spriteRender->Init(L"sprite/famima ao tobira hikakin.dds", 1000.0f, 720.0f);
 	//ドアの右左の画像をロード
 	R_spriteRender->Init(L"sprite/famima ao tobira migi.dds", 300.0f, 350.0f);
 	L_spriteRender->Init(L"sprite/famima ao tobira hidari.dds", 300.0f, 350.0f);

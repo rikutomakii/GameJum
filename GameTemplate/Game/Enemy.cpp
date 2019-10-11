@@ -40,7 +40,8 @@ void Enemy::Update()
 
 void Enemy::enemyMove()
 {
-	enemyPos.z += 33;//‚±‚Á‚¿‚É—ˆ‚é‘¬“x
+	//enemyPos.z += 10;//‚±‚Á‚¿‚É—ˆ‚é‘¬“x
+	enemyPos.z += 33;//‚±‚Á‚¿‚É—ˆ‚é‘¬“x	
 	enemyPos.x = 200;
 	enemyPos.y = -120;
 	

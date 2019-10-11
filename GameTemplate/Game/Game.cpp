@@ -147,4 +147,9 @@ void Game::PostRender(CRenderContext& rc)
 	);
 
 	m_fontTest.End(rc);
+
+
+	
+
+
 }
