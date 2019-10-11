@@ -24,17 +24,18 @@ bool Enemy::Start()
 	//m_SkinModelRender->SetPosition({ -10.0f,-10.0f,0.0f });
 
 	
-
+	m_game = FindGO<Game>("Game");
 	return true;
 }
 
 void Enemy::Update()
 {
-	
-
-
 	enemyMove();
 	Shoumetsu();
+	if (m_game->m_timer >= 0.0f)
+	{
+		DeleteGO(this);
+	}
 }
 
 void Enemy::enemyMove()
@@ -72,16 +73,16 @@ void Enemy::Shoumetsu()
 		){
 		DeleteGO(this);//エネミースキンの破棄
 		
-		HogeFlag = true;
-
 		
+
+		if (HogeFlag == true) {
 			Geezi* g = FindGO<Geezi>("geezi");
 			Game* gm = FindGO<Game>("Game");
 
 			//m_point += 1;
 			g->scale.y += 0.9;
 			gm->count2 += 1;
-			
+		}
 
 
 		//エフェクトを再生

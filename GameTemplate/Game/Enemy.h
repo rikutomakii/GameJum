@@ -2,6 +2,7 @@
 #include "Geezi.h"
 #include "Game.h"
 class Effect;
+class Game;
 class Enemy:public IGameObject
 {
 public:
@@ -25,11 +26,11 @@ public:
 	CVector3 scale = CVector3::One;//スキンサイズ
 	int m_point = 0;
 	int count3 = 0;
-	bool HogeFlag = false;
+	bool HogeFlag = true;
 	bool countFlag = false;
 	CVector3 efPos;
 	
-
+	Game* m_game = nullptr;
 
 };
 
