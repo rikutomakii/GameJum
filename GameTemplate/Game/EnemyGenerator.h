@@ -2,6 +2,7 @@
 #include "Enemy.h"
 #include "Enemy2.h"
 #include "Game.h"
+#include "BackGround.h"
 class EnemyGenerator : public IGameObject
 {
 public:
