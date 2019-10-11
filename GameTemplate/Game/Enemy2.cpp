@@ -12,7 +12,7 @@ bool Enemy2::Start()
 {
 	//enemyPatarn = rand() %  1;
 	m_SkinModelRender = NewGO<prefab::CSkinModelRender>(0);//スキンモデルレンダー
-	m_SkinModelRender->Init(L"modelData/lastEnemy.cmo");//後で帰るモデルデータ
+	m_SkinModelRender->Init(L"modelData/bomEnemy.cmo");//後で帰るモデルデータ
 	//font = NewGO<prefab::CFontRender>(0);//文字出すやつ
 	//m_CSoundSource = NewGO<prefab::CSoundSource>(0);//音出すやつ
 	effect = NewGO<prefab::CEffect>(0);//こっからエフェクト 14:27先輩に殴られる
@@ -30,7 +30,7 @@ void Enemy2::Update()
 
 void Enemy2::EnemyMove()
 {
-	enemy2Pos.z += 10;
+	enemy2Pos.z += 5;
 }
 
 void Enemy2::enemyShoumetsu()
@@ -38,12 +38,12 @@ void Enemy2::enemyShoumetsu()
 
 	//タイミングよく消せたとき
 	if (Pad(0).IsPress(enButtonA) &&
-		enemy2Pos.z >= -15.0 &&
-		enemy2Pos.z <= 15.0) {
+		enemy2Pos.z >= -30.0 &&
+		enemy2Pos.z <= 30.0) {
 		DeleteGO(this);//エネミースキンの破棄
 
 		//エフェクトを再生。
-		effect->Play(L"effect/blood.efk");
+		effect->Play(L"effect/bom.efk");
 		//エフェクトの座標
 		CVector3 emitPos;
 		//エフェクトにエネミーのポジションを代入。
@@ -55,15 +55,6 @@ void Enemy2::enemyShoumetsu()
 		//font->SetText(L"Great");
 		//DeleteGO(font);
 
-
-
-		//速くたたきすぎた時
-
-		if (Pad(0).IsPress(enButtonA) &&
-			enemy2Pos.z > 15.0f &&
-			enemy2Pos.z < 25.0f) {
-			DeleteGO(this);
-		}
 	}
 }
 
