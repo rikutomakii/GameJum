@@ -2,8 +2,11 @@
 #include "EnemyGenerator.h"
 #include "Enemy.h"
 #include "Enemy2.h"
+#include "Game.h"
 EnemyGenerator::~EnemyGenerator()
 {
+	Enemy* enemy;
+	DeleteGO(enemy->m_SkinModelRender);
 }
 
 
@@ -23,6 +26,10 @@ void EnemyGenerator::enemyGenerator()
 		startFlag = 0;
 		r = rand() % 400;
 		count = 0;
+	}
+	Game* game;
+	if (game->count2 == 10) {
+		DeleteGO(this);
 	}
 
 }
