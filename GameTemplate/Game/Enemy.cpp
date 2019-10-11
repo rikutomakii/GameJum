@@ -61,8 +61,6 @@ void Enemy::Shoumetsu()
 
 	effect->SetPosition(efPos);//エフェクトはエネミーのポジションで。
 
-	
-
 	effect->SetScale(scale);
 	//タイミングよく消せたとき
 	Geezi* g = FindGO<Geezi>("geezi");
