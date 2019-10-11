@@ -1851,6 +1851,9 @@
     <ImageContentTask Include="Assets\sprite\famima ao tobira.png" />
     <ImageContentTask Include="Assets\sprite\famima ao.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\famima ao tobira hikakin.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />
