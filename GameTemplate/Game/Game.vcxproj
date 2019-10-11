@@ -1807,6 +1807,7 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
+    <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
     <MeshContentTask Include="Assets\modelData\sirusi.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
@@ -1832,6 +1833,17 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\famima ao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\famima ao tobira waku.png" />
+    <ImageContentTask Include="Assets\sprite\famima ao tobira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\famima ao tobira hidari.png" />
+    <ImageContentTask Include="Assets\sprite\famima ao tobira migi.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

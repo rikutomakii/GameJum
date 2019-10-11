@@ -60,6 +60,7 @@
     <MeshContentTask Include="Assets\modelData\sirusi.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Enemy.FBX" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
@@ -97,5 +98,12 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{a7b51687-d3ac-488f-a5ae-517dbbf3bf1e}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\famima ao.png" />
+    <Image Include="Assets\sprite\famima ao tobira waku.png" />
+    <Image Include="Assets\sprite\famima ao tobira.png" />
+    <Image Include="Assets\sprite\famima ao tobira hidari.png" />
+    <Image Include="Assets\sprite\famima ao tobira migi.png" />
   </ItemGroup>
 </Project>
