@@ -16,6 +16,7 @@ public:
 	prefab::CSkinModelRender* m_skinModelRender3 = nullptr;
 
 	prefab::CSoundSource* ss;
+	prefab::CDirectionLight* m_directionLig = nullptr;
 
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_position2 = CVector3::Zero;

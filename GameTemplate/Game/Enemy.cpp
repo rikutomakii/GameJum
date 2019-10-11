@@ -55,8 +55,6 @@ void Enemy::Shoumetsu()
 	scale.y = 5.0f;
 	scale.z = 5.0f;
 	CVector3 emitPos = enemyPos;
-
-	
 	
 	efPos.x = 40;
 	effect->SetPosition(effectPos);//セットポジション
@@ -76,19 +74,15 @@ void Enemy::Shoumetsu()
 		){
 		DeleteGO(this);//エネミースキンの破棄
 		
+		ss = NewGO<prefab::CSoundSource>(0);
+
+		ss->Init(L"sound/握りつぶす・踏みつける音 (online-audio-converter.com).wav");
+		ss->Play(false);
+
 		g->scale.y += 0.9;
 		gm->count2 += 1;
-		
-
-		
-			
-			
 
 			//m_point += 1;
-			
-		
-
-
 		//エフェクトを再生
 		effect->Play(L"effect/blood.efk");
 		
@@ -112,6 +106,11 @@ void Enemy::Shoumetsu()
 		gm->count2 -= 1;
 	}*/
 
+	Door* dr = FindGO<Door>("door");
+	if (dr->DownFlag == true) {
+		g->scale.y -= 0.9;
+		gm->count2 -= 1;
+	}
 
 	//通り過ぎた時
 	if (enemyPos.z >= 100){//falseの時の処理 z = 50ぐらい

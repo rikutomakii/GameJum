@@ -60,5 +60,6 @@
     <Media Include="Assets\sound\mens-yeah1.wav" />
     <Media Include="Assets\sound\tin1.wav" />
     <Media Include="Assets\sound\【高音質】ファミリーマート入店音.wav" />
+    <Media Include="Assets\sound\握りつぶす・踏みつける音 (online-audio-converter.com).wav" />
   </ItemGroup>
 </Project>

@@ -49,5 +49,6 @@ public:
 
 	bool StartFlag = false;
 	bool OwariFlag = false;
+	bool ClearFlag = false;
 };
 

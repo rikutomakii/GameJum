@@ -53,19 +53,20 @@ void Game::Update()
 		DeleteGO(this);
 	}*/
 
-	
+	if (Pad(0).IsPress(enButtonB)&&ClearFlag == true) {
+		NewGO<Titlescene>(0, "title");
+		DeleteGO(this);
+	}
 
 	if (count2 == 10 && m_gc == nullptr)
 	{
+		ClearFlag = true;
 		m_gc = NewGO<GameClear>(0,"gameC");
-		if (Pad(0).IsPress(enButtonB)) {
-			NewGO<Titlescene>(0, "title");
-			DeleteGO(this);
-		}
+		count2 = 11;
+		
 	}
 
 	if (Pad(0).IsTrigger(enButtonB) && OwariFlag == true) {
-
 		NewGO<Titlescene>(0, "title");
 		DeleteGO(this);
 	}
