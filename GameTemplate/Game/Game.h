@@ -10,6 +10,7 @@
 #include "result.h"
 #include"GameClear.h"
 #include "Enemy2.h"
+#include "EnemyGenerator.h"
 
 class Enemy2;
 class result;
@@ -35,6 +36,7 @@ public:
 	GameClear* m_gc = nullptr;
 	Enemy* m_ey = nullptr;
 	Enemy2* m_ey2 = nullptr;
+	EnemyGenerator* m_eyG = nullptr;
 
 	int r = rand() % 200;
 	int startFlag = 0;
