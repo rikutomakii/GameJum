@@ -1,27 +1,27 @@
 #include "stdafx.h"
 #include "EnemyGenerator.h"
 #include "Enemy.h"
+#include "Enemy2.h"
 EnemyGenerator::~EnemyGenerator()
 {
 }
 
-bool EnemyGenerator::Start()
-{
 
-	NewGO<Enemy>(0);
-	return true;
-}
 
-void EnemyGenerator::Update()
+void EnemyGenerator::enemyGenerator()
 {
 	count++;
 	startFlag++;
 	if (startFlag > 70 &&
 		count >= r) {
 
-		NewGO<Enemy>(0);
+		Enemy* enemy = NewGO<Enemy>(0);
+
+		if (startFlag % 2 == 0) {
+			Enemy2* enemy2 = NewGO<Enemy2>(0);
+		}
 		startFlag = 0;
-		r = rand() % 200;
+		r = rand() % 400;
 		count = 0;
 	}
 
