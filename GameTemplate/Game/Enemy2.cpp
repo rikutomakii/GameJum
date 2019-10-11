@@ -8,6 +8,7 @@ Enemy2::Enemy2()
 Enemy2::~Enemy2()
 {
 	DeleteGO(m_SkinModelRender);
+	//DeleteGO(m_CSoundSource);
 }
 
 

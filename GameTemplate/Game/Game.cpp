@@ -4,24 +4,34 @@
 #include "Enemy2.h"
 #include "tkEngine/light/tkDirectionLight.h"
 #include "result.h"
+#include "Titlescene.h"
 Game::Game()
 {
 	m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
-	m_rs = NewGO<result>(0, "result");
+	//m_rs = NewGO<result>(0, "result");
+	
+	//m_ey2 = NewGO<Enemy2>(0, "enemy2");
 	//->SetTime(m_timer)
 }
 
 
 Game::~Game()
 {
+	DeleteGO(m_backG);
+	DeleteGO(m_door);
+	DeleteGO(m_geezi);
+	//DeleteGO(m_rs);
+	DeleteGO(m_ey);
+	//DeleteGO(m_ey2);
+	
 }
 bool Game::Start(){
 	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
 	MainCamera().SetPosition({ -80.0f, 150.0f, 150.0f });
 
-	NewGO<Enemy>(0);
+	
 
 	StartFlag = true;
 
@@ -30,22 +40,41 @@ bool Game::Start(){
 
 void Game::Update()
 {
-	if (Pad(0).IsPress(enButtonY)) {
-		//GameSceneのインスタンスを生成
+	/*if (Pad(0).IsPress(enButtonY)) {
+		GameSceneのインスタンスを生成
 		NewGO<result>(0, "result");
-		//シーンが切り替わるのでTitlsSceneのインスタンスを削除
+		シーンが切り替わるのでTitlsSceneのインスタンスを削除
 		DeleteGO(this);
+	}*/
+
+	if (count2 == 10)
+	{
+		DeleteGO(this);
+		m_gc = NewGO<GameClear>(0,"gameC");
+		if (Pad(0).IsPress(enButtonB)) {
+			NewGO<Titlescene>(0, "title");
+		}
 	}
 
+	if (m_timer == 0 /*&& OwariFlag == false*/) {
+		DeleteGO(this);
+		//m_rs = NewGO<result>(0, "result");
+		
+		OwariFlag = true;
+		NewGO<Titlescene>(0, "title");
+		
+	}
+	if (Pad(0).IsPress(enButtonB)&&OwariFlag==true) {
+		
+	}
 
 	MainCamera().Update();
-count++;
+	count++;
 	startFlag++;
 	if (startFlag > 70 &&
 		count >= r) {
-		
-		NewGO<Enemy>(0);
 		startFlag = 0;
+		m_ey = NewGO<Enemy>(0, "enemy");
 		r = rand() % 200;
 		count = 0;
 	}

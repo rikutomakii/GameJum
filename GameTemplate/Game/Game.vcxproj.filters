@@ -30,9 +30,9 @@
     <ClCompile Include="Geezi.cpp" />
     <ClCompile Include="result.cpp" />
     <ClCompile Include="Effect.cpp" />
-    <ClCompile Include="Enemy2Generator.cpp" />
-    <ClCompile Include="EnemyGenerator.cpp" />
-  </ItemGroup>
+<ClCompile Include="GameClear.cpp" />
+<ClCompile Include="Enemy2Generator.cpp" />
+<ClCompile Include="EnemyGenerator.cpp" />  </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
       <Filter>Resource Files</Filter>
@@ -47,8 +47,13 @@
     <ClInclude Include="Geezi.h" />
     <ClInclude Include="result.h" />
     <ClInclude Include="Effect.h" />
+<<<<<<< .mine
     <ClInclude Include="Enemy2Generator.h" />
     <ClInclude Include="EnemyGenerator.h" />
+=======
+    <ClInclude Include="GameClear.h" />
+
+>>>>>>> .theirs
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -64,6 +69,9 @@
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
     <MeshContentTask Include="Assets\modelData\sirusi.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Enemy2.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>

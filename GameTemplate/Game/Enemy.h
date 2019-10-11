@@ -1,4 +1,6 @@
 #pragma once
+#include "Geezi.h"
+#include "Game.h"
 class Effect;
 class Enemy:public IGameObject
 {
@@ -21,6 +23,11 @@ public:
 	CVector2 text = CVector2::Zero;//テキストのポジション
 	int enemyPatarn = 0;
 	CVector3 scale = CVector3::One;//スキンサイズ
+	int m_point = 0;
+	int count3 = 0;
+	bool HogeFlag = false;
+	bool countFlag = false;
+	CVector3 efPos;
 	
 
 

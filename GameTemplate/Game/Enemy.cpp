@@ -4,12 +4,14 @@
 
 Enemy::Enemy()
 {
-
+	
 }
 
 Enemy::~Enemy()
 {
 	DeleteGO(m_SkinModelRender);
+	//DeleteGO(effect2);
+	//DeleteGO(m_CSoundSource);
 
 }
 
@@ -17,14 +19,20 @@ bool Enemy::Start()
 {
 	//enemyPatarn = rand() %  1;
 	m_SkinModelRender = NewGO<prefab::CSkinModelRender>(0);//スキンモデルレンダー
-	m_SkinModelRender->Init(L"modelData/Enemy.cmo");//後で帰るモデルデータ
+	m_SkinModelRender->Init(L"modelData/Enemy2.cmo");//後で帰るモデルデータ
+	m_SkinModelRender->SetScale({ 3.0f,3.0f,3.0f });
+	//m_SkinModelRender->SetPosition({ -10.0f,-10.0f,0.0f });
+
 	
-	
+
 	return true;
 }
 
 void Enemy::Update()
 {
+	
+
+
 	enemyMove();
 	Shoumetsu();
 }
@@ -32,6 +40,8 @@ void Enemy::Update()
 void Enemy::enemyMove()
 {
 	enemyPos.z += 3;//こっちに来る速度
+	enemyPos.x = 200;
+	enemyPos.y = -120;
 	
 	m_SkinModelRender->SetPosition(enemyPos);
 
@@ -44,17 +54,35 @@ void Enemy::Shoumetsu()
 	scale.y = 5.0f;
 	scale.z = 5.0f;
 	CVector3 emitPos = enemyPos;
+
+	
+	
+	efPos.x = 40;
 	effect->SetPosition(effectPos);//セットポジション
 
-	effect->SetPosition(emitPos);//エフェクトはエネミーのポジションで。
+	effect->SetPosition(efPos);//エフェクトはエネミーのポジションで。
 
+	
 
 	effect->SetScale(scale);
 	//タイミングよく消せたとき
 	if (Pad(0).IsTrigger(enButtonA)&&
-		enemyPos.z >=-30.0&&
-		enemyPos.z <= 30.0 ){
+		enemyPos.z >=-50.0&&
+		enemyPos.z <= 50.0 
+		){
 		DeleteGO(this);//エネミースキンの破棄
+		
+		HogeFlag = true;
+
+		
+			Geezi* g = FindGO<Geezi>("geezi");
+			Game* gm = FindGO<Game>("Game");
+
+			//m_point += 1;
+			g->scale.y += 0.9;
+			gm->count2 += 1;
+			
+
 
 		//エフェクトを再生
 		effect->Play(L"effect/blood.efk");
