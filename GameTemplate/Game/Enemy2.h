@@ -1,6 +1,7 @@
 #pragma once
 class Enemy2 : public IGameObject
 {
+public:
 	Enemy2();
 	~Enemy2();
 	bool Start();

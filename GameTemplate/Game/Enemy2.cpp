@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "Enemy2.h"
 
+Enemy2::Enemy2()
+{
+}
+
 Enemy2::~Enemy2()
 {
 	DeleteGO(m_SkinModelRender);

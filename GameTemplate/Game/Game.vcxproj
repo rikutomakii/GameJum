@@ -1767,6 +1767,8 @@
     <ClCompile Include="Effect.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Enemy2.cpp" />
+    <ClCompile Include="Enemy2Generator.cpp" />
+    <ClCompile Include="EnemyGenerator.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Geezi.cpp" />
     <ClCompile Include="main.cpp" />
@@ -1799,6 +1801,8 @@
     <ClInclude Include="Effect.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Enemy2.h" />
+    <ClInclude Include="Enemy2Generator.h" />
+    <ClInclude Include="EnemyGenerator.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Geezi.h" />
     <CLInclude Include="resource.h" />
