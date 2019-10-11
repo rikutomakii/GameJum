@@ -28,6 +28,7 @@ public:
 	float m_timer = 0.0f;
 	bool DoorFlag = false;
 	bool DoorFlag2 = false;
+	bool DownFlag = false;
 
 
 

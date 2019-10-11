@@ -66,22 +66,26 @@ void Enemy::Shoumetsu()
 
 	effect->SetScale(scale);
 	//タイミングよく消せたとき
+	/*Geezi* g = FindGO<Geezi>("geezi");
+	Game* gm = FindGO<Game>("Game");*/
+
 	if (Pad(0).IsTrigger(enButtonA)&&
 		enemyPos.z >=-50.0&&
 		enemyPos.z <= 50.0 
 		){
 		DeleteGO(this);//エネミースキンの破棄
 		
+	/*	g->scale.y += 0.9;
+		gm->count2 += 1;*/
 		
 
-		if (HogeFlag == true) {
-			Geezi* g = FindGO<Geezi>("geezi");
-			Game* gm = FindGO<Game>("Game");
+		
+			
+			
 
 			//m_point += 1;
-			g->scale.y += 0.9;
-			gm->count2 += 1;
-		}
+			
+		
 
 
 		//エフェクトを再生
@@ -96,6 +100,17 @@ void Enemy::Shoumetsu()
 		//DeleteGO(this);
 
 	}
+	//Door* dr = FindGO<Door>("door");
+	
+	/*if (Pad(0).IsTrigger(enButtonA) &&
+		enemyPos.z <= -50.0 &&
+		enemyPos.z >= 50.0 &&
+		dr->DownFlag == true
+		) {
+		g->scale.y -= 0.9;
+		gm->count2 -= 1;
+	}*/
+
 
 	//通り過ぎた時
 	if (enemyPos.z >= 100){//falseの時の処理 z = 50ぐらい

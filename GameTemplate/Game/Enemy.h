@@ -1,6 +1,7 @@
 #pragma once
 #include "Geezi.h"
 #include "Game.h"
+#include "Door.h"
 class Effect;
 class Enemy:public IGameObject
 {

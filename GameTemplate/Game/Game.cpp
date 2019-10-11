@@ -59,16 +59,16 @@ void Game::Update()
 		}
 	}
 
-	if (m_timer == 0 /*&& OwariFlag == false*/) {
+	if (m_timer == 0 ) {
 		DeleteGO(this);
-		m_rs = NewGO<result>(0, "result");
-		
+	//	m_rs = NewGO<result>(0, "result");
 		OwariFlag = true;
-		NewGO<Titlescene>(0, "title");
 		
 	}
-	if (Pad(0).IsPress(enButtonB)&&OwariFlag==true) {
+	if (Pad(0).IsPressAnyKey() && OwariFlag == true) {
 		
+		NewGO<Titlescene>(0, "title");
+		DeleteGO(this);
 	}
 
 	MainCamera().Update();
@@ -76,7 +76,8 @@ void Game::Update()
 	count++;
 	startFlag++;
 	if (startFlag > 70 &&
-		count >= r) {
+		count >= r
+		/*&& OwariFlag == false*/) {
 		startFlag = 0;
 		m_ey = NewGO<Enemy>(0, "enemy");
 		r = rand() % 200;

@@ -55,6 +55,7 @@ void Door::Update()
 		m_position2.x = -16.0f;
 		m_skinModelRender->SetPosition(m_position);
 		m_skinModelRender2->SetPosition(m_position2);
+		DownFlag = true;
 		if (m_timer >= 300) {
 			ss = NewGO<prefab::CSoundSource>(0);
 
