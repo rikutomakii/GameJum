@@ -7,7 +7,7 @@
 #include"GameClear.h"
 
 class EnemyGenerator;
-
+//class GameClear;
 class Enemy2;
 class result;
 class GameClear;
@@ -40,7 +40,7 @@ public:
 	int count = 0;
 	CFont m_fontTest;	
 	float m_posintFontScale = 1.5f;
-	float m_timer = 60.0f;
+	float m_timer = 61.0f;
 	int count2 = 0;
 
 

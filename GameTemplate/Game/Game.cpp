@@ -26,6 +26,7 @@ Game::~Game()
 	DeleteGO(m_door);
 	DeleteGO(m_geezi);
 	DeleteGO(m_rs);
+	DeleteGO(m_gc);
 	DeleteGOs("enemy");
 	//DeleteGO(m_ey2);
 	
@@ -60,11 +61,11 @@ void Game::Update()
 	
 	
 	
-	if (count2 == 30) {
+	/*if (count2 == 30) {
 		DeleteGO(m_ey->m_SkinModelRender);
 		DeleteGO(m_ey->m_SkinModelRender);
 		DeleteGO(this);
-	}
+	}*/
 
 	if (Pad(0).IsPress(enButtonB)&&ClearFlag == true) {
 		NewGO<Titlescene>(0, "title");
