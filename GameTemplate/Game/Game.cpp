@@ -9,9 +9,9 @@
 //#include "EnemyGenerator.h"
 Game::Game()
 {
-	m_backG = NewGO<BackGround>(0, "backG");
-	m_door = NewGO<Door>(0, "door");
-	m_geezi = NewGO<Geezi>(0, "geezi");
+	
+	//m_door = NewGO<Door>(0, "door");
+	//m_geezi = NewGO<Geezi>(0, "geezi");
 	//m_eyG = NewGO<EnemyGenerator>(0, "enemyG");	//m_ey = NewGO<Enemy>(0, "enemy");
 	//m_rs = NewGO<result>(0, "result");
 	
@@ -22,7 +22,7 @@ Game::Game()
 
 Game::~Game()
 {
-	//DeleteGO(m_backG);
+	DeleteGO(m_backG);
 	DeleteGO(m_door);
 	DeleteGO(m_geezi);
 	DeleteGO(m_rs);
@@ -32,11 +32,12 @@ Game::~Game()
 }
 bool Game::Start()
 {
-
+	m_backG = NewGO<BackGround>(0, "backG");
 	//m_backG = NewGO<BackGround>(0, "backG");
 	m_door = NewGO<Door>(0, "door");
 	m_geezi = NewGO<Geezi>(0, "geezi");
 	//m_eyG = NewGO<EnemyGenerator>(0, "enemyG");
+	//NewGO<Enemy2>(0, "enemy2");
 
 	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
 	MainCamera().SetPosition({ -80.0f, 150.0f, 150.0f });
