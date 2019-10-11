@@ -5,10 +5,13 @@
 #include "tkEngine/light/tkDirectionLight.h"
 #include "result.h"
 #include "Titlescene.h"
+#include "EnemyGenerator.h"
 Game::Game()
 {
-	
-	//m_ey = NewGO<Enemy>(0, "enemy");
+//m_backG = NewGO<BackGround>(0, "backG");
+	m_door = NewGO<Door>(0, "door");
+	m_geezi = NewGO<Geezi>(0, "geezi");
+	m_eyG = NewGO<EnemyGenerator>(0, "enemyG");	//m_ey = NewGO<Enemy>(0, "enemy");
 	//m_rs = NewGO<result>(0, "result");
 	
 	//m_ey2 = NewGO<Enemy2>(0, "enemy2");
@@ -18,7 +21,7 @@ Game::Game()
 
 Game::~Game()
 {
-	DeleteGO(m_backG);
+	//DeleteGO(m_backG);
 	DeleteGO(m_door);
 	DeleteGO(m_geezi);
 	DeleteGO(m_rs);
@@ -52,12 +55,13 @@ void Game::Update()
 		シーンが切り替わるのでTitlsSceneのインスタンスを削除
 		DeleteGO(this);
 	}*/
-
 	if (Pad(0).IsPress(enButtonB)&&ClearFlag == true) {
 		NewGO<Titlescene>(0, "title");
 		DeleteGO(this);
 	}
+	m_eyG->enemyGenerator();
 
+	//条件を満たしたときタイトルシーン
 	if (count2 == 10 && m_gc == nullptr)
 	{
 		ClearFlag = true;
@@ -65,12 +69,12 @@ void Game::Update()
 		count2 = 11;
 		
 	}
-
+	//Bボタンを押したときにタイトルに戻る
 	if (Pad(0).IsTrigger(enButtonB) && OwariFlag == true) {
 		NewGO<Titlescene>(0, "title");
 		DeleteGO(this);
 	}
-
+	//タイマーがゼロになったとき、リザルトNewGO
 	if (m_timer == 0 &&m_rs ==nullptr) {
 		OwariFlag = true;
 		//DeleteGO(this);
@@ -81,6 +85,8 @@ void Game::Update()
 	
 
 	MainCamera().Update();
+
+
 
 	//count++;
 	//startFlag++;

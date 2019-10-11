@@ -3,14 +3,10 @@
 #include "tkEngine/graphics/effect/tkEffect.h"
 #include "tkEngine/physics/tkPhysicsGhostObject.h"
 #include "tkEngine/character/tkCharacterController.h"
-#include "BackGround.h"
-#include "Door.h"
-#include "Enemy.h"
 #include "Geezi.h"
-#include "result.h"
 #include"GameClear.h"
-#include "Enemy2.h"
-#include "EnemyGenerator.h"
+
+class EnemyGenerator;
 
 class Enemy2;
 class result;
@@ -37,6 +33,7 @@ public:
 	Enemy* m_ey = nullptr;
 	Enemy2* m_ey2 = nullptr;
 	EnemyGenerator* m_eyG = nullptr;
+
 
 	int r = rand() % 200;
 	int startFlag = 0;
