@@ -32,10 +32,10 @@ void Enemy::Update()
 {
 	enemyMove();
 	Shoumetsu();
-	if (m_game->m_timer >= 0.0f)
+	/*if (m_game->m_timer >= 0.0f)
 	{
 		DeleteGO(this);
-	}
+	}*/
 }
 
 void Enemy::enemyMove()
@@ -106,11 +106,11 @@ void Enemy::Shoumetsu()
 		gm->count2 -= 1;
 	}*/
 
-	Door* dr = FindGO<Door>("door");
+	/*Door* dr = FindGO<Door>("door");
 	if (dr->DownFlag == true) {
 		g->scale.y -= 0.9;
 		gm->count2 -= 1;
-	}
+	}*/
 
 	//’Ê‚è‰ß‚¬‚½
 	if (enemyPos.z >= 100){//false‚Ì‚Ìˆ— z = 50‚®‚ç‚¢
