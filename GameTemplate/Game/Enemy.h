@@ -2,6 +2,7 @@
 #include "Geezi.h"
 #include "Game.h"
 class Effect;
+class Game;
 class Enemy:public IGameObject
 {
 public:
@@ -29,7 +30,7 @@ public:
 	bool countFlag = false;
 	CVector3 efPos;
 	
-
+	Game* m_game = nullptr;
 
 };
 

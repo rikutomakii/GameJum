@@ -24,17 +24,18 @@ bool Enemy::Start()
 	//m_SkinModelRender->SetPosition({ -10.0f,-10.0f,0.0f });
 
 	
-
+	m_game = FindGO<Game>("Game");
 	return true;
 }
 
 void Enemy::Update()
 {
-	
-
-
 	enemyMove();
 	Shoumetsu();
+	if (m_game->m_timer >= 0.0f)
+	{
+		DeleteGO(this);
+	}
 }
 
 void Enemy::enemyMove()

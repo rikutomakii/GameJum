@@ -1816,6 +1816,7 @@
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Door2.FBX" />
     <MeshContentTask Include="Assets\modelData\Enemy2.FBX" />
+    <MeshContentTask Include="Assets\modelData\haikei.FBX" />
     <MeshContentTask Include="Assets\modelData\hospital.FBX" />
     <MeshContentTask Include="Assets\modelData\sirusi.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
