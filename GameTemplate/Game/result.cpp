@@ -20,7 +20,7 @@ bool result::Start()
 
 	//CSpriteRenderのインスタンスを生成
 	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
-	m_spriteRender->Init(L"sprite/GameOver.dds",		//読み込むファイルのファイルパス。
+	m_spriteRender->Init(L"sprite/GameOver2.dds",		//読み込むファイルのファイルパス。
 		1280.0f,					//スプライトの幅。
 		720.0f						//スプライトの高さ。
 	);
