@@ -40,7 +40,7 @@ void Enemy::Update()
 
 void Enemy::enemyMove()
 {
-	enemyPos.z += 10;//こっちに来る速度
+	enemyPos.z += 33;//こっちに来る速度
 	enemyPos.x = 200;
 	enemyPos.y = -120;
 	
@@ -67,8 +67,8 @@ void Enemy::Shoumetsu()
 	Game* gm = FindGO<Game>("Game");
 
 	if (Pad(0).IsTrigger(enButtonA)&&
-		enemyPos.z >=-50.0&&
-		enemyPos.z <= 50.0 
+		enemyPos.z >=-25.0&&
+		enemyPos.z <= 25.0 
 		){
 		DeleteGO(this);//エネミースキンの破棄
 		
